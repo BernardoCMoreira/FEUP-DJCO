@@ -121,6 +121,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &381237667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 381237668}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &381237668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381237667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.047, y: -0.129, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 479135193}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &479135187
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,6 +166,7 @@ GameObject:
   - component: {fileID: 479135189}
   - component: {fileID: 479135188}
   - component: {fileID: 479135194}
+  - component: {fileID: 479135195}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -263,7 +294,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 5044450397378941176, guid: 26aa192c21c486d4696dad49f713dba3,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -286,7 +317,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.444699, y: 19.695377, z: 1.1878796}
   m_LocalScale: {x: 0.15380114, y: 62.74862, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1166295956}
+  - {fileID: 381237668}
   m_Father: {fileID: 674858937}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -302,7 +335,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb99222548f46ef41b86880beb6cb050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  feet: {fileID: 1166295956}
+  ground:
+    serializedVersion: 2
+    m_Bits: 256
   MAX_HIGH: 10
+--- !u!114 &479135195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479135187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7a91973258ab5479faa614b3736ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 381237668}
+  bulletAmmo: {fileID: 2389044171774875921, guid: 5578e754e61d38340acd55234d03749e,
+    type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +531,7 @@ GameObject:
   - component: {fileID: 674858936}
   - component: {fileID: 674858935}
   - component: {fileID: 674858934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,6 +789,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1166295955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1166295956}
+  m_Layer: 0
+  m_Name: Feet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1166295956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166295955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.017, y: -0.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 479135193}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1304015296
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +831,7 @@ GameObject:
   - component: {fileID: 1304015300}
   - component: {fileID: 1304015299}
   - component: {fileID: 1304015298}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Corrimao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -941,7 +1023,7 @@ GameObject:
   - component: {fileID: 1478572488}
   - component: {fileID: 1478572487}
   - component: {fileID: 1478572490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BricksWide_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -998,7 +1080,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300002, guid: 559d64157b63ddb48b7284bb56bf0ec5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1018,7 +1100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478572486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2768, y: -4.6958046, z: 0}
+  m_LocalPosition: {x: 1.2768, y: -4.6958046, z: -1}
   m_LocalScale: {x: 2.956432, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

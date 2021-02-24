@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
-{
+{   
+    [SerializeField] public Transform feet;
+    public LayerMask ground;
     /* Player structure */
     private Rigidbody2D rb;
     private Animator anim;
@@ -25,9 +27,14 @@ public class PlayerBehavior : MonoBehaviour
         facingRight = true;
     }
 
+    bool touchGround(){
+        Collider2D coll = Physics2D.OverlapCircle(feet.position, 0.1f, ground);
+        return coll!=null;
+        
+    }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)){
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && touchGround()){
             anim.SetTrigger("isJumping");
             space=true;
         }
@@ -58,9 +65,10 @@ public class PlayerBehavior : MonoBehaviour
     void Flip ()
     {
         facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+
+        // simply rotate player
+
+        transform.Rotate(0f, 180f, 0f);
     }
 
 }
