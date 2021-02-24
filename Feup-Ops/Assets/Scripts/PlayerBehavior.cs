@@ -38,7 +38,6 @@ public class PlayerBehavior : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
         speed = Input.GetAxis("Horizontal");
-
     }
 
     void FixedUpdate(){
