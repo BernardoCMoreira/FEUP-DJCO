@@ -4,38 +4,48 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {
+    /* Player structure */
     private Rigidbody2D rb;
+    private Animator anim;
+
+    /* Player physics */    
     private bool space;
     private float speed; 
-private bool facingRight;
-    public int MAX_HIGH = 10;
 
-    // Start is called before the first frame update
+    /* Aux */
+    private bool facingRight;
+    public int MAX_HIGH = 5;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+
         facingRight = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)){
-             space=true;
-         
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)){
+            anim.SetTrigger("isJumping");
+            space=true;
         }
         
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)){
+            anim.SetBool("isRunning", true);
+        } else {
+            anim.SetBool("isRunning", false);
+        }
         speed = Input.GetAxis("Horizontal");
 
-    
     }
 
     void FixedUpdate(){
         if(space){
-            rb.AddForce(Vector2.up * MAX_HIGH, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
             space = false;
         }
-
 
         if(speed > 0 && !facingRight)
             Flip();
@@ -43,7 +53,7 @@ private bool facingRight;
             Flip();
 
 
-        rb.velocity = new Vector2 (speed * 5, rb.velocity.y);
+        rb.velocity = new Vector2 (speed, rb.velocity.y);
     }
 
     void Flip ()
