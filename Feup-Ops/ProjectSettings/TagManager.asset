@@ -41,3 +41,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Corrimao
+    uniqueID: 605643451
+    locked: 0
