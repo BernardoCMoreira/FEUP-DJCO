@@ -42,7 +42,7 @@ public class PlayerBehavior : MonoBehaviour
 
     void FixedUpdate(){
         if(space){
-            rb.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
             space = false;
         }
 
@@ -52,7 +52,7 @@ public class PlayerBehavior : MonoBehaviour
             Flip();
 
 
-        rb.velocity = new Vector2 (speed, rb.velocity.y);
+        rb.velocity = new Vector2 (speed*2, rb.velocity.y);
     }
 
     void Flip ()
