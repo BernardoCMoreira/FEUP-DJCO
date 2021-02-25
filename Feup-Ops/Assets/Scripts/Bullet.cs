@@ -14,13 +14,20 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb.velocity = transform.right * speed;
+        Destroy(gameObject, 5); //Destruir ao fim de 5sec, mesmo q n toque em nada
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo){
+
+        if(hitInfo.attachedRigidbody && ((hitInfo.attachedRigidbody.name) == "Player") ){ //se for rigid body
+            return;
+        }
+
         Enemy enemy  = hitInfo.GetComponent<Enemy>();
         if(enemy!= null){
             enemy.TakeDamage(damage);
         }
+
         Destroy(gameObject);
     }
 }

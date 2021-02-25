@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public GameObject bullet;
     public Transform firePoint;
-    public GameObject bulletAmmo;
-    // Update is called once per frame
-    void Update()
-    {   
-        if(Input.GetButtonDown("Fire1")){
-            Shoot();
-        }
-        
-    }
+    public float bulletSpeed = 50;
+    public GameObject player;
 
-    void Shoot() 
+    Vector2 lookDirection;
+    float lookAngle;
+
+    void Update()
     {
-        // shooting logic
-        Instantiate(bulletAmmo, firePoint.position, firePoint.rotation);
-    
+        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(player.transform.position.x, player.transform.position.y);
+        lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x)  * Mathf.Rad2Deg;
+
+        firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject bulletClone = Instantiate(bullet);
+            bulletClone.transform.position = firePoint.position;
+            bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
+
+            bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
+        }
     }
 }
