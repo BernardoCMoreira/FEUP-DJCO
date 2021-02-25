@@ -286,8 +286,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  deathEffect: {fileID: 469415203638593921, guid: a18f5aac5db237a44b5e46b7e7eae69e,
-    type: 3}
 --- !u!1 &381237667
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381237667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.164, y: -0.125, z: 0}
+  m_LocalPosition: {x: 0.164, y: -0.076, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 479135193}
@@ -482,8 +480,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479135187}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.444699, y: 19.695377, z: 1.1878796}
-  m_LocalScale: {x: 0.15380114, y: 62.74862, z: 1}
+  m_LocalPosition: {x: -0.3561, y: 21.83, z: 1.1878796}
+  m_LocalScale: {x: 0.15380114, y: 72.483696, z: 1}
   m_Children:
   - {fileID: 1166295956}
   - {fileID: 381237668}
@@ -506,6 +504,7 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
+  facingRight: 0
   MAX_HIGH: 10
 --- !u!114 &479135195
 MonoBehaviour:
@@ -519,9 +518,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7a91973258ab5479faa614b3736ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 2389044171774875921, guid: 5578e754e61d38340acd55234d03749e, type: 3}
   firePoint: {fileID: 381237668}
-  bulletAmmo: {fileID: 2389044171774875921, guid: 5578e754e61d38340acd55234d03749e,
-    type: 3}
+  bulletSpeed: 20
+  player: {fileID: 479135187}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,8 +869,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746611422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.028334737, y: -0.010644982, z: 0}
-  m_LocalScale: {x: 1.4423873, y: 1.6871908, z: 1}
+  m_LocalPosition: {x: 0.01, y: -0.010644982, z: 0}
+  m_LocalScale: {x: 1.438168, y: 1.6871908, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
