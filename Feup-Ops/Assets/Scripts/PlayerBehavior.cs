@@ -15,7 +15,7 @@ public class PlayerBehavior : MonoBehaviour
     private float speed; 
 
     /* Aux */
-    private bool facingRight;
+    public bool facingRight;
     public int MAX_HIGH = 5;
 
 
@@ -62,7 +62,7 @@ public class PlayerBehavior : MonoBehaviour
         rb.velocity = new Vector2 (speed*2, rb.velocity.y);
     }
 
-    void Flip ()
+    public void Flip ()
     {
         facingRight = !facingRight;
 

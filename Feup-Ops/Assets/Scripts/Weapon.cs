@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public GameObject bullet;
     public Transform firePoint;
-    public float bulletSpeed = 20f;
+    public float bulletSpeed = 50;
     public GameObject player;
 
     Vector2 lookDirection;
@@ -21,6 +21,10 @@ public class Weapon : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            /*if(lookAngle > 90f && lookAngle < 180f) {
+                PlayerBehavior playerBehavior = (PlayerBehavior) player.GetComponent(typeof(PlayerBehavior));
+            }*/
+
             GameObject bulletClone = Instantiate(bullet);
             bulletClone.transform.position = firePoint.position;
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
