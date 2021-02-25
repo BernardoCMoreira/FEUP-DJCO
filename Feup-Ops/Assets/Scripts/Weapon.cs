@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public GameObject bullet;
     public Transform firePoint;
-    public float bulletSpeed = 50;
+    public float bulletSpeed = 20f;
     public GameObject player;
 
     Vector2 lookDirection;
