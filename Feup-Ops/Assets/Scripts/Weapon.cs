@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public GameObject bullet;
+    public GameObject bullet1;
+    public GameObject bullet2;
     public Transform firePoint;
     public float bulletSpeed = 50;
     public GameObject player;
@@ -25,7 +26,14 @@ public class Weapon : MonoBehaviour
                 PlayerBehavior playerBehavior = (PlayerBehavior) player.GetComponent(typeof(PlayerBehavior));
             }*/
 
-            GameObject bulletClone = Instantiate(bullet);
+            GameObject bulletClone = Instantiate(bullet1);
+            bulletClone.transform.position = firePoint.position;
+            bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
+
+            bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
+        }
+        if (Input.GetMouseButtonDown(1)){
+            GameObject bulletClone = Instantiate(bullet2);
             bulletClone.transform.position = firePoint.position;
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
 

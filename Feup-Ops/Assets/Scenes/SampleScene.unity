@@ -518,7 +518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7a91973258ab5479faa614b3736ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2389044171774875921, guid: 5578e754e61d38340acd55234d03749e, type: 3}
+  bullet1: {fileID: 2389044171774875921, guid: 5578e754e61d38340acd55234d03749e, type: 3}
+  bullet2: {fileID: 6221142508917939156, guid: 45273df536297f24c968779a53e3d801, type: 3}
   firePoint: {fileID: 381237668}
   bulletSpeed: 20
   player: {fileID: 479135187}
