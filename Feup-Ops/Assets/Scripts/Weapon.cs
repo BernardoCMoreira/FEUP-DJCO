@@ -7,7 +7,7 @@ public class Weapon : MonoBehaviour
     public GameObject bullet1;
     public GameObject bullet2;
     public Transform firePoint;
-    public float bulletSpeed = 50;
+    public float bulletSpeed = 10f;
     public GameObject player;
 
     Vector2 lookDirection;
@@ -36,6 +36,7 @@ public class Weapon : MonoBehaviour
             GameObject bulletClone = Instantiate(bullet2);
             bulletClone.transform.position = firePoint.position;
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
+
 
             bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
         }

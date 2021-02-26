@@ -5,12 +5,15 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
-    //public GameObject deathEffect;
     private Animator anim;
+
+    private float speed = 0.25f;
+    private Transform target;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
     
     void Update(){
@@ -18,12 +21,16 @@ public class Enemy : MonoBehaviour
             anim.SetBool("isDying", true);
             Die();
         }
+
+        transform.position = Vector2.MoveTowards(transform.position, target.position, speed*Time.deltaTime);
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage; 
     }
+
+
     void Die()
     {   
         Destroy(gameObject, 2);

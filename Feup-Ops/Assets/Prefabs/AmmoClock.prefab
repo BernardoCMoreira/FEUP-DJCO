@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1401365148937776050}
   - component: {fileID: -9066180444862933584}
   m_Layer: 0
-  m_Name: AlarmClockTrans
+  m_Name: AmmoClock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,5 +133,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb2ed940d0395cf4c88f366f52c0d8ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 168171388622142535}
   damage: 40

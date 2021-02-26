@@ -1,0 +1,956 @@
+fileFormatVersion: 2
+guid: 69c0c2cb4d9a64f4d8c02eb164f38622
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7065589634987555048
+    second: RedFlame_3
+  - first:
+      213: -8919317516251152403
+    second: RedFlame_4
+  - first:
+      213: 2091982788858887375
+    second: RedFlame_11
+  - first:
+      213: -7488346447694176699
+    second: RedFlame_12
+  - first:
+      213: 2150987583088229145
+    second: RedFlame_13
+  - first:
+      213: -122970985511040487
+    second: RedFlame_14
+  - first:
+      213: 7288363655865065233
+    second: RedFlame_15
+  - first:
+      213: 8532727739111901811
+    second: RedFlame_16
+  - first:
+      213: 9089477810594441238
+    second: RedFlame_17
+  - first:
+      213: -8578361912527698773
+    second: RedFlame_18
+  - first:
+      213: -8526219628759170019
+    second: RedFlame_19
+  - first:
+      213: 4205389393685543401
+    second: RedFlame_20
+  - first:
+      213: -3753592042418972048
+    second: RedFlame_21
+  - first:
+      213: -9167052051226488842
+    second: RedFlame_22
+  - first:
+      213: -8504125993488495524
+    second: RedFlame_23
+  - first:
+      213: -6898513614799804453
+    second: RedFlame_24
+  - first:
+      213: -6336424933592856270
+    second: RedFlame_25
+  - first:
+      213: 113341469049519608
+    second: RedFlame_26
+  - first:
+      213: 5479072185661819631
+    second: RedFlame_27
+  - first:
+      213: 5554263798944302743
+    second: RedFlame_28
+  - first:
+      213: 8926126537425061254
+    second: RedFlame_29
+  - first:
+      213: 872269950510912104
+    second: RedFlame_30
+  - first:
+      213: -2793757122590553907
+    second: RedFlame_31
+  - first:
+      213: 8123526636255741217
+    second: RedFlame_32
+  - first:
+      213: 5014882145124632569
+    second: RedFlame_33
+  - first:
+      213: -2414560683528441207
+    second: RedFlame_34
+  - first:
+      213: 3204356190621443595
+    second: RedFlame_35
+  - first:
+      213: -8654844167042741104
+    second: RedFlame_36
+  - first:
+      213: -4380215214529039834
+    second: RedFlame_37
+  - first:
+      213: -6230302476257066522
+    second: RedFlame_38
+  - first:
+      213: 3984440259031141981
+    second: RedFlame_52
+  - first:
+      213: 1834021387639964728
+    second: RedFlame_53
+  - first:
+      213: -1190413273948079793
+    second: RedFlame_54
+  - first:
+      213: 4959271462656521325
+    second: RedFlame_55
+  - first:
+      213: 3276526955394875205
+    second: RedFlame_56
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RedFlame_3
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1806
+        width: 113
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81782ed79abf1fd90800000000000000
+      internalID: -7065589634987555048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_4
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1803
+        width: 118
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def3eecb9f7383480800000000000000
+      internalID: -8919317516251152403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_11
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1828
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcc3a2e3347380d10800000000000000
+      internalID: 2091982788858887375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_12
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1499
+        width: 122
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e512ea49c041890800000000000000
+      internalID: -7488346447694176699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_13
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1499
+        width: 123
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bff367fc7d9dd10800000000000000
+      internalID: 2150987583088229145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_14
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1500
+        width: 127
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a4fea4a8e1b4ef0800000000000000
+      internalID: -122970985511040487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_15
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 1500
+        width: 127
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f54bd2128752560800000000000000
+      internalID: 7288363655865065233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_16
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 1500
+        width: 130
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a03ee9ba65a6670800000000000000
+      internalID: 8532727739111901811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_17
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 1502
+        width: 137
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618e64e19ef442e70800000000000000
+      internalID: 9089477810594441238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_18
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1502
+        width: 139
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4cb096a4983f880800000000000000
+      internalID: -8578361912527698773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_19
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 1504
+        width: 142
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14c8d6eb68cca980800000000000000
+      internalID: -8526219628759170019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_20
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1204
+        width: 146
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e972d85f5b8c5a30800000000000000
+      internalID: 4205389393685543401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_21
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1205
+        width: 151
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a52efbcef88ebc0800000000000000
+      internalID: -3753592042418972048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_22
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1204
+        width: 155
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff01218ab618c080800000000000000
+      internalID: -9167052051226488842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_23
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 1208
+        width: 157
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cc3f837764bf980800000000000000
+      internalID: -8504125993488495524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_24
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 1202
+        width: 158
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd769afca6e8340a0800000000000000
+      internalID: -6898513614799804453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_25
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1203
+        width: 163
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239054f381f7018a0800000000000000
+      internalID: -6336424933592856270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_26
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 1202
+        width: 167
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd7401377ba29100800000000000000
+      internalID: 113341469049519608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_27
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 1204
+        width: 165
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea881d9f13990c40800000000000000
+      internalID: 5479072185661819631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_28
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 905
+        width: 158
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79603e45f75b41d40800000000000000
+      internalID: 5554263798944302743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_29
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 904
+        width: 156
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685886b0bc8ffdb70800000000000000
+      internalID: 8926126537425061254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_30
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 903
+        width: 155
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862537406ecea1c00800000000000000
+      internalID: 872269950510912104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_31
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 904
+        width: 150
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8c54fe2b49a39d0800000000000000
+      internalID: -2793757122590553907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_32
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 900
+        width: 150
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12582757f609cb070800000000000000
+      internalID: 8123526636255741217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_33
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 900
+        width: 147
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f74a92bdb0789540800000000000000
+      internalID: 5014882145124632569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_34
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 900
+        width: 148
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982b9a9e9d1cd7ed0800000000000000
+      internalID: -2414560683528441207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_35
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 900
+        width: 151
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06a0db5af8287c20800000000000000
+      internalID: 3204356190621443595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_36
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 601
+        width: 157
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c4e0dd511d3e780800000000000000
+      internalID: -8654844167042741104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_37
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 604
+        width: 159
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6223c3248795633c0800000000000000
+      internalID: -4380215214529039834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_38
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 605
+        width: 160
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1067b48e48989a0800000000000000
+      internalID: -6230302476257066522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_52
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 28
+        width: 170
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e015c1e439b4730800000000000000
+      internalID: 3984440259031141981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_53
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 185
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834cfb82cb0c37910800000000000000
+      internalID: 1834021387639964728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_54
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 41
+        width: 155
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f493a663f6dca7fe0800000000000000
+      internalID: -1190413273948079793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_55
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 50
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64bf54be1fd2d440800000000000000
+      internalID: 4959271462656521325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedFlame_56
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 34
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54fbd49f7ef887d20800000000000000
+      internalID: 3276526955394875205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
