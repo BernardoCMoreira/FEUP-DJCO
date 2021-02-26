@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 479135195}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -411,7 +411,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.7542367
+  orthographic size: 5.691491
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1830,12 +1830,12 @@ PrefabInstance:
     - target: {fileID: 620583151490108037, guid: 1510f783a6570b74dbb105c1db674497,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.14
+      value: -10.1
       objectReference: {fileID: 0}
     - target: {fileID: 620583151490108037, guid: 1510f783a6570b74dbb105c1db674497,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.03
+      value: -3.47
       objectReference: {fileID: 0}
     - target: {fileID: 620583151490108037, guid: 1510f783a6570b74dbb105c1db674497,
         type: 3}
@@ -1891,6 +1891,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7560168419909224513, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
+        type: 3}
+      propertyPath: speed
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7560168419909224525, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
         type: 3}
       propertyPath: m_Name
