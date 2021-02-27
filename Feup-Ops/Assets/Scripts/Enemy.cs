@@ -30,6 +30,12 @@ public class Enemy : MonoBehaviour
         health -= damage; 
     }
 
+   void OnCollisionEnter2D(Collision2D col)
+    {   
+        if(col.gameObject.name == "Player"){
+            Destroy(col.gameObject);
+        } 
+    }
 
     void Die()
     {   

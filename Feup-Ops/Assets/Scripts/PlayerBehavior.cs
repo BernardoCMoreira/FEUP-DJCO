@@ -71,4 +71,8 @@ public class PlayerBehavior : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
     }
 
+    public void Die(){
+        Destroy(gameObject);
+    }
+
 }
