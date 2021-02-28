@@ -273,6 +273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  projectile: {fileID: 0}
+  startTimeBtwShots: 0
 --- !u!61 &7560168419909224512
 BoxCollider2D:
   m_ObjectHideFlags: 0

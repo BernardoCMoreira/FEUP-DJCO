@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
     float lookAngle;
 
     void Update()
-    {
+    {   
         lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(player.transform.position.x, player.transform.position.y);
         lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x)  * Mathf.Rad2Deg;
 

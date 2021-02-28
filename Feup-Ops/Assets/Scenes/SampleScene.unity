@@ -228,7 +228,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.8
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1822,6 +1822,32 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 620583151490106745, guid: 1510f783a6570b74dbb105c1db674497,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 804140205228949417, guid: 497af4ca8e0754d47be5d4c9c660509c,
+        type: 3}
+    - target: {fileID: 620583151490106745, guid: 1510f783a6570b74dbb105c1db674497,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 620583151490106745, guid: 1510f783a6570b74dbb105c1db674497,
+        type: 3}
+      propertyPath: startTimeBtwShots
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 620583151490106747, guid: 1510f783a6570b74dbb105c1db674497,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 620583151490108036, guid: 1510f783a6570b74dbb105c1db674497,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 620583151490108037, guid: 1510f783a6570b74dbb105c1db674497,
         type: 3}
       propertyPath: m_RootOrder
@@ -1891,10 +1917,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1246235492908749380, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246235492908749380, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246235492908749380, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246235492908749380, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 7560168419909224513, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
         type: 3}
       propertyPath: speed
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560168419909224513, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 4609443898904036105, guid: eee4bdafbe8986e49a2afc67bd8796d8,
+        type: 3}
+    - target: {fileID: 7560168419909224513, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
+        type: 3}
+      propertyPath: bulletSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560168419909224513, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
+        type: 3}
+      propertyPath: startTimeBtwShots
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560168419909224515, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7560168419909224525, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
         type: 3}
