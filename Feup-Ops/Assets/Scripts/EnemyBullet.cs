@@ -6,7 +6,7 @@ public class EnemyBullet : MonoBehaviour
 {   
     public float speed = 5f;
     private Rigidbody2D rb;
-     private Transform target;
+    private Transform target;
     // Start is called before the first frame update
     void Start()
     {       
@@ -19,14 +19,17 @@ public class EnemyBullet : MonoBehaviour
             }
     }
 
+
     void OnTriggerEnter2D(Collider2D hitInfo){
         if(hitInfo.attachedRigidbody && ((hitInfo.attachedRigidbody.name) == "DiscoEnemy") 
             ||  hitInfo.attachedRigidbody && ((hitInfo.attachedRigidbody.name) == "BeerEnemy") ){
             return;
         }           
-
+       
         if(hitInfo.attachedRigidbody && (hitInfo.attachedRigidbody.name == "Player")){
-            Debug.Log("Player Got Shot");    
+
+            Debug.Log("Player Got Shot");  
+
             Destroy(gameObject);
         }
     }

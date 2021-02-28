@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0603fcffdd17b841b9fa459d38e6ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraShake: {fileID: 0}
   health: 100
   projectile: {fileID: 0}
   startTimeBtwShots: 0

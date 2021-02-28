@@ -18,7 +18,6 @@ public class PlayerBehavior : MonoBehaviour
     public bool facingRight;
     public int MAX_HIGH = 5;
 
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -74,5 +73,6 @@ public class PlayerBehavior : MonoBehaviour
     public void Die(){
         Destroy(gameObject);
     }
+
 
 }

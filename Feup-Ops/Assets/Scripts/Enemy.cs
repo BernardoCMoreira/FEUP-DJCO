@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{
+{   
+    public CameraShake CameraShake;
+
     public int health = 100;
     private Animator anim;
 
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour
         }else{
             timeBtwShots -=Time.deltaTime;
         }
+ 
     }
 
     public void TakeDamage(int damage)
@@ -49,6 +52,7 @@ public class Enemy : MonoBehaviour
             // Uncoment line below in order to destroy player when he dies
             //Destroy(col.gameObject);
 
+            StartCoroutine(CameraShake.Shake(.15f, .4f));  
 
             // will leave a debug log to remember me to uncoment line above
             Debug.Log("Player died");
