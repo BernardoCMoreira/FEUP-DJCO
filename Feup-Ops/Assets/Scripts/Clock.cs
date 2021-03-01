@@ -10,6 +10,7 @@ public class Clock : MonoBehaviour
     private float day;
     float currentTime = 0f;
     float startingTime = 0f;
+    float minutes = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,11 @@ public class Clock : MonoBehaviour
     void Update()
     {
         currentTime += 1  * Time.deltaTime;
-        timeCounter.text = currentTime.ToString("0");
+        if(currentTime == 60){
+            minutes ++ ;
+            currentTime = 0;
+        }
+        timeCounter.text = minutes.ToString("00") + ":" + currentTime.ToString("00");
     
     }
 }
