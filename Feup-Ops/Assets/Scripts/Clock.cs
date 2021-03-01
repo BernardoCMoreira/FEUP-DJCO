@@ -6,27 +6,22 @@ using UnityEngine.UI;
 public class Clock : MonoBehaviour
 {
 
-    public Text timeCounter;
+    [SerializeField] Text timeCounter;
     private float day;
+    float currentTime = 0f;
+    float startingTime = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentTime = startingTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        day += Time.deltaTime / 60f;
-        float dayNormalized = day % 1f;
-
-
-        float hours = Mathf.Floor(dayNormalized * 24f);
-        float minutesPerHour = 60f;
-        string minutes = (((dayNormalized * hours) % 1f) * minutesPerHour).ToString("00");
-    
-        timeCounter.text = hours.ToString("00") + ":" + minutes;
+        currentTime += 1  * Time.deltaTime;
+        timeCounter.text = currentTime.ToString("0");
     
     }
 }
