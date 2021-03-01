@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {   
-    public float speed = 5f;
     private Rigidbody2D rb;
     private Transform target;
-    // Start is called before the first frame update
+
+    /* Public vars */
+    public float speed = 5f;
+    public int damage = 40;
+
+
     void Start()
     {       
             rb = gameObject.GetComponent<Rigidbody2D>();
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
             if(rb.transform.position.x <= target.position.x){
                 rb.velocity = transform.right * speed;
             } else {
@@ -27,8 +32,10 @@ public class EnemyBullet : MonoBehaviour
         }           
        
         if(hitInfo.attachedRigidbody && (hitInfo.attachedRigidbody.name == "Player")){
-
-            Debug.Log("Player Got Shot");  
+            PlayerBehavior pb = hitInfo.GetComponent<PlayerBehavior>();
+            if(pb!= null){
+                pb.TakeDamage(damage);
+            }
 
             Destroy(gameObject);
         }

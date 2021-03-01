@@ -6,6 +6,7 @@ public class PlayerBehavior : MonoBehaviour
 {   
     [SerializeField] public Transform feet;
     public LayerMask ground;
+
     /* Player structure */
     private Rigidbody2D rb;
     private Animator anim;
@@ -17,6 +18,8 @@ public class PlayerBehavior : MonoBehaviour
     /* Aux */
     public bool facingRight;
     public int MAX_HIGH = 5;
+    public int health = 100;
+
 
     void Start()
     {
@@ -29,10 +32,15 @@ public class PlayerBehavior : MonoBehaviour
     bool touchGround(){
         Collider2D coll = Physics2D.OverlapCircle(feet.position, 0.1f, ground);
         return coll!=null;
-        
     }
+
     void Update()
     {
+        if(health <= 0 ) {
+            //TODO: arranjar anim;
+            Die();
+        }
+
         if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && touchGround()){
             anim.SetTrigger("isJumping");
             space=true;
@@ -64,15 +72,17 @@ public class PlayerBehavior : MonoBehaviour
     public void Flip ()
     {
         facingRight = !facingRight;
-
-        // simply rotate player
-
         transform.Rotate(0f, 180f, 0f);
     }
 
     public void Die(){
-        Destroy(gameObject);
+        //Destroy(gameObject); //Perguntar ao prof se o melhor é terminar a cena e matar todos de uma vez ou 1 a 1...
+        Debug.Log("Player died");
     }
 
+    public void TakeDamage(int damage){
+        health -= damage; 
+        Debug.Log(health);
+    }
 
 }
