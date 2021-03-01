@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerBehavior : MonoBehaviour
 {   
+
+    public CameraShake CameraShake;
+
+
     [SerializeField] public Transform feet;
     public LayerMask ground;
 
@@ -81,6 +85,8 @@ public class PlayerBehavior : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
+        StartCoroutine(CameraShake.Shake(.15f, .4f));  
+        
         health -= damage; 
         Debug.Log(health);
     }

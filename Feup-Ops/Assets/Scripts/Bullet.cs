@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {   
     private Rigidbody2D rb;
 
-    
+
     /* Public vars */
     public int damage = 40;
 
@@ -23,15 +23,13 @@ public class Bullet : MonoBehaviour
         }           
 
         if(hitInfo.attachedRigidbody && 
-                ((rb.name == "AmmoClock(Clone)" && hitInfo.attachedRigidbody.name == "DiscoEnemy") ||
-                 (rb.name == "AmmoCoffee(Clone)" && hitInfo.attachedRigidbody.name == "BeerEnemy"))){
-
-                    Enemy enemy  = hitInfo.GetComponent<Enemy>();
-                    if(enemy!= null){
-                        enemy.TakeDamage(damage);
-                    }
-
-                    Destroy(gameObject);
+            ((rb.name == "AmmoClock(Clone)" && hitInfo.attachedRigidbody.name == "DiscoEnemy") ||
+             (rb.name == "AmmoCoffee(Clone)" && hitInfo.attachedRigidbody.name == "BeerEnemy"))){
+                Enemy enemy  = hitInfo.GetComponent<Enemy>();
+                if(enemy!= null){
+                    enemy.TakeDamage(damage);
+                }
+                Destroy(gameObject);
         }
     }
 }

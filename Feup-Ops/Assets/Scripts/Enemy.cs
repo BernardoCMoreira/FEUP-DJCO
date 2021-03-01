@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {   
-    public CameraShake CameraShake;
-
     private Animator anim;
 
     private Transform target;
@@ -45,8 +43,6 @@ public class Enemy : MonoBehaviour
    void OnCollisionEnter2D(Collision2D col)
     {   
         if(col.gameObject.name == "Player"){ 
-            StartCoroutine(CameraShake.Shake(.15f, .4f));  
-
             PlayerBehavior pb = col.gameObject.GetComponent<PlayerBehavior>();
             if(pb!=null) {
                 pb.Die();
@@ -61,6 +57,8 @@ public class Enemy : MonoBehaviour
 
     void attackPlayer(){
         //lookAtPlayer(); >> LookAt(..) not working
+        //lookAtPlayer();
+
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed*Time.deltaTime);
 
         if (timeBtwShots <=0){
@@ -70,6 +68,12 @@ public class Enemy : MonoBehaviour
             timeBtwShots -=Time.deltaTime;
         }
         
+    }
+
+    void lookAtPlayer(){
+        if(target.position.x < transform.position.x){
+            transform.Rotate(0f, 180f, 0f);
+        }
     }
 
 }
