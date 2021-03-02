@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 1186122009409740947}
   - component: {fileID: 2072816864357204717}
   - component: {fileID: -5160244273182200544}
+  - component: {fileID: -2579681209290615788}
   m_Layer: 0
-  m_Name: AmmoCoffe
+  m_Name: AmmoCoffee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,5 +134,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb2ed940d0395cf4c88f366f52c0d8ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  rb: {fileID: 1186122009409740947}
+  damage: 40
+  bulletAnim: {fileID: 3061376520588359431, guid: 87be9162735826040bfb51f608cf8995,
+    type: 3}
+--- !u!95 &-2579681209290615788
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2389044171774875921}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

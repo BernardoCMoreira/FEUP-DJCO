@@ -30,8 +30,13 @@ public class Enemy : MonoBehaviour
             Die();
         }
 
-        if(Vector2.Distance(transform.position, target.position) <= MinDist) {
+        if((Vector2.Distance(transform.position, target.position) <= MinDist) && health > 0) {
+            anim.SetBool("isWalking", true);
             attackPlayer();
+        }
+        else {
+            anim.SetBool("isWalking", false);
+
         }
     }
 
@@ -41,7 +46,7 @@ public class Enemy : MonoBehaviour
     }
 
    void OnCollisionEnter2D(Collision2D col)
-    {   
+    {           
         if(col.gameObject.name == "Player"){ 
             PlayerBehavior pb = col.gameObject.GetComponent<PlayerBehavior>();
             if(pb!=null) {
@@ -52,7 +57,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {   
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 0.5f);
     }
 
     void attackPlayer(){

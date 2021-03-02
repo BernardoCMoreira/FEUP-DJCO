@@ -6,11 +6,11 @@ public class Bullet : MonoBehaviour
 {   
     private Rigidbody2D rb;
 
-
     /* Public vars */
     public int damage = 40;
+    public GameObject bulletAnim;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,7 +29,15 @@ public class Bullet : MonoBehaviour
                 if(enemy!= null){
                     enemy.TakeDamage(damage);
                 }
+
+                animate();
+   
                 Destroy(gameObject);
         }
+    }
+
+    private void animate(){
+        GameObject x = Instantiate(bulletAnim, transform.position, transform.rotation);
+        Destroy(x, 0.7f);
     }
 }
