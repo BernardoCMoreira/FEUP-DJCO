@@ -70,7 +70,21 @@ public class PlayerBehavior : MonoBehaviour
             Flip();
 
 
+ 
+
         rb.velocity = new Vector2 (speed*2, rb.velocity.y);
+
+        if (rb.velocity.y >= 0)
+        {
+            Debug.Log("ignore");
+            Physics2D.IgnoreLayerCollision(0, 1, true);
+        }
+        //else the collision will not be ignored
+        else
+        {
+            Physics2D.IgnoreLayerCollision(0, 1, false);
+        }
+
     }
 
     public void Flip ()

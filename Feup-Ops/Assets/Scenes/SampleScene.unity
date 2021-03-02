@@ -306,10 +306,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 674858937}
     m_Modifications:
+    - target: {fileID: 3474428649041792454, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474428650233318273, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.15959027
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474428650233318273, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.11040977
+      objectReference: {fileID: 0}
     - target: {fileID: 3474428650233318278, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474428650233318278, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3474428650233318284, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
@@ -376,11 +396,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3474428650233318285, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3474428650233318287, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: CameraShake
       value: 
       objectReference: {fileID: 519420030}
+    - target: {fileID: 3474428650335434742, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11867d1b67a2db240a7ed1af69e3b6a4, type: 3}
 --- !u!1 &519420028
@@ -449,7 +479,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.645741
+  orthographic size: 5.9325843
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -473,7 +503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.22, y: 0, z: 0}
+  m_LocalPosition: {x: 0.59, y: -0.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 58054084}
@@ -1117,7 +1147,7 @@ GameObject:
   - component: {fileID: 1478572488}
   - component: {fileID: 1478572487}
   - component: {fileID: 1478572490}
-  m_Layer: 8
+  m_Layer: 1
   m_Name: BricksWide_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1856,8 +1886,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880026561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.917716, y: -4.7307367, z: 4.973633}
-  m_LocalScale: {x: 1.398883, y: 1.7209464, z: 1}
+  m_LocalPosition: {x: 8.52, y: -4.88, z: 4.973633}
+  m_LocalScale: {x: 1.5722067, y: 1.7771614, z: 1}
   m_Children: []
   m_Father: {fileID: 305539146}
   m_RootOrder: 3
