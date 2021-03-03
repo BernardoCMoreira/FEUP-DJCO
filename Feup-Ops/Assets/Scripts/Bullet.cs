@@ -18,6 +18,7 @@ public class Bullet : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo){
+        // TODO: mudar para tags
         if(hitInfo.attachedRigidbody && ((hitInfo.attachedRigidbody.name) == "Player") ){
             return;
         }           
@@ -31,6 +32,13 @@ public class Bullet : MonoBehaviour
                 }
 
                 animate();
+   
+                Destroy(gameObject);
+        }
+
+        if(hitInfo.attachedRigidbody && hitInfo.attachedRigidbody.tag=="Explode"){
+            Debug.Log("Destroy");
+                            animate();
    
                 Destroy(gameObject);
         }
