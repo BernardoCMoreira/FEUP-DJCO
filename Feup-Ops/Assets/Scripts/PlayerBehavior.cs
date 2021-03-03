@@ -19,17 +19,23 @@ public class PlayerBehavior : MonoBehaviour
     private bool space;
     private float speed; 
 
+    /* Player game vars */
+    private int score;
+
+
     /* Aux */
     public bool facingRight;
     public int MAX_HIGH = 5;
     public int health = 100;
 
 
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
+        score= 0;
         facingRight = true;
     }
 
@@ -69,14 +75,10 @@ public class PlayerBehavior : MonoBehaviour
         else if(speed < 0 && facingRight)
             Flip();
 
-
- 
-
         rb.velocity = new Vector2 (speed*2, rb.velocity.y);
 
         if (rb.velocity.y >= 0)
         {
-            Debug.Log("ignore");
             Physics2D.IgnoreLayerCollision(0, 1, true);
         }
         //else the collision will not be ignored
@@ -87,14 +89,14 @@ public class PlayerBehavior : MonoBehaviour
 
     }
 
-    public void Flip ()
+    private void Flip ()
     {
         facingRight = !facingRight;
         transform.Rotate(0f, 180f, 0f);
     }
 
     public void Die(){
-        //Destroy(gameObject); //Perguntar ao prof se o melhor é terminar a cena e matar todos de uma vez ou 1 a 1...
+        Destroy(gameObject, 1);
         Debug.Log("Player died");
     }
 
@@ -102,7 +104,17 @@ public class PlayerBehavior : MonoBehaviour
         StartCoroutine(CameraShake.Shake(.15f, .4f));  
         
         health -= damage; 
-        Debug.Log(health);
+        Debug.Log("health: " + health);
     }
+
+   void OnCollisionEnter2D(Collision2D col)
+    {           
+        if(col.gameObject.tag == "Book"){ 
+            Destroy(col.gameObject);
+            score += 10;
+            Debug.Log(score);
+        } 
+    }
+
 
 }

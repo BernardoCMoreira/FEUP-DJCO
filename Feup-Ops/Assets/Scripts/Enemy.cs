@@ -30,13 +30,18 @@ public class Enemy : MonoBehaviour
             Die();
         }
 
-        if((Vector2.Distance(transform.position, target.position) <= MinDist) && health > 0) {
-            anim.SetBool("isWalking", true);
-            attackPlayer();
+        if(target == null) {
+            Debug.Log("Player lost!");
+            //TODO: redirecionar menu
         }
         else {
-            anim.SetBool("isWalking", false);
-
+            if((Vector2.Distance(transform.position, target.position) <= MinDist) && health > 0) {
+                anim.SetBool("isWalking", true);
+                attackPlayer();
+            }
+            else {
+                anim.SetBool("isWalking", false);
+            }
         }
     }
 
