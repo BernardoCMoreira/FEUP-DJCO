@@ -348,12 +348,12 @@ PrefabInstance:
     - target: {fileID: 3474428650233318284, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.3
+      value: -12.49
       objectReference: {fileID: 0}
     - target: {fileID: 3474428650233318284, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.87
+      value: -3.93
       objectReference: {fileID: 0}
     - target: {fileID: 3474428650233318284, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
@@ -405,6 +405,11 @@ PrefabInstance:
       propertyPath: CameraShake
       value: 
       objectReference: {fileID: 519420030}
+    - target: {fileID: 3474428650233318287, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
+      propertyPath: ground.m_Bits
+      value: 257
+      objectReference: {fileID: 0}
     - target: {fileID: 3474428650335434742, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_Layer
@@ -887,7 +892,7 @@ GameObject:
   - component: {fileID: 1304015300}
   - component: {fileID: 1304015299}
   - component: {fileID: 1304015298}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CorrimaoLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1245,7 +1250,7 @@ GameObject:
   - component: {fileID: 1478572488}
   - component: {fileID: 1478572487}
   - component: {fileID: 1478572490}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: Elevator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2075,7 +2080,7 @@ GameObject:
   - component: {fileID: 2038409907}
   - component: {fileID: 2038409906}
   - component: {fileID: 2038409905}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CorrimaoRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2181,6 +2186,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 620583151161887985, guid: 1510f783a6570b74dbb105c1db674497,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65
+      objectReference: {fileID: 0}
     - target: {fileID: 620583151490106744, guid: 1510f783a6570b74dbb105c1db674497,
         type: 3}
       propertyPath: m_Controller
@@ -2365,7 +2375,7 @@ PrefabInstance:
     - target: {fileID: 7560168419909224526, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.66
+      value: 1.53
       objectReference: {fileID: 0}
     - target: {fileID: 7560168419909224526, guid: cbbe59379ebe8c04f8fd7bd5ba0db48b,
         type: 3}
