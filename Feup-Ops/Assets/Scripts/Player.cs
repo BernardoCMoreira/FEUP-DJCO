@@ -30,7 +30,9 @@ public class Player : MonoBehaviour
     /* Global vars*/
     public static bool isFrozen;
 
+    /*Life bar*/
 
+    public HealthBar healthBar;
 
     void Start()
     {   
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour
         score= 0;
         facingRight = true;
         isFrozen = false;
+        healthBar.SetMaxHealth(health);
     }
 
     bool touchGround(){
@@ -106,6 +109,7 @@ public class Player : MonoBehaviour
         StartCoroutine(CameraShake.Shake(.15f, .4f));  
         
         health -= damage; 
+        healthBar.SetHealth(health);
         Debug.Log("health: " + health);
     }
 
