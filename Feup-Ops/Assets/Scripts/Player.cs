@@ -125,6 +125,10 @@ public class Player : MonoBehaviour
             }
                 
         }
+        if(col.gameObject.tag == "Heart"){ 
+            Destroy(col.gameObject);
+            health += 20;
+        }
     }
 
 

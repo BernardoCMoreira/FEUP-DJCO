@@ -8,6 +8,7 @@ TagManager:
   - Book
   - Frozen
   - Clock
+  - Heart
   layers:
   - Default
   - TransparentFX
