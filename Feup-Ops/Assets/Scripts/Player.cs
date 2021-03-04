@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBehavior : MonoBehaviour
+public class Player : MonoBehaviour
 {   
 
     public CameraShake CameraShake;
-
 
     [SerializeField] public Transform feet;
     public LayerMask ground;
@@ -28,15 +27,18 @@ public class PlayerBehavior : MonoBehaviour
     public int MAX_HIGH = 5;
     public int health = 100;
 
+    /* Global vars*/
+    public static bool isFrozen;
 
 
 
     void Start()
-    {
+    {   
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         score= 0;
         facingRight = true;
+        isFrozen = false;
     }
 
     bool touchGround(){
@@ -112,9 +114,20 @@ public class PlayerBehavior : MonoBehaviour
         if(col.gameObject.tag == "Book"){ 
             Destroy(col.gameObject);
             score += 10;
-            Debug.Log(score);
-        } 
+        }
+        if(col.gameObject.tag == "Frozen"){ 
+            Destroy(col.gameObject);
+            isFrozen = true;
+            GameObject c = GameObject.FindGameObjectWithTag("Clock");
+            if(c!=null){
+                Debug.Log(GetComponent<Clock>());
+                c.GetComponent<Clock>().StartFreezeCount(5);
+            }
+                
+        }
     }
+
+
 
 
 }

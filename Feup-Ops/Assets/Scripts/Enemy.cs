@@ -25,6 +25,9 @@ public class Enemy : MonoBehaviour
     }
     
     void Update(){
+        if(Player.isFrozen){
+            return;
+        }
         if(health <= 0 ){
             anim.SetBool("isDying", true);
             Die();
@@ -53,7 +56,7 @@ public class Enemy : MonoBehaviour
    void OnCollisionEnter2D(Collision2D col)
     {           
         if(col.gameObject.name == "Player"){ 
-            PlayerBehavior pb = col.gameObject.GetComponent<PlayerBehavior>();
+            Player pb = col.gameObject.GetComponent<Player>();
             if(pb!=null) {
                 pb.Die();
             }

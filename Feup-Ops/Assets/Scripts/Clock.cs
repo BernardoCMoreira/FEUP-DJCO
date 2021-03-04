@@ -11,6 +11,8 @@ public class Clock : MonoBehaviour
     float currentTime = 0f;
     float startingTime = 0f;
     float minutes = 0f;
+    float freezeEndTime = 0f;
+    float freezeDuration = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,25 @@ public class Clock : MonoBehaviour
             minutes ++ ;
             currentTime = 0;
         }
-        timeCounter.text = minutes.ToString("00") + ":" + currentTime.ToString("00");
-    
+        if(Player.isFrozen && currentTime < freezeEndTime){
+            timeCounter.color = Color.red;
+        }
+        else if(Player.isFrozen && (currentTime >= freezeEndTime)){
+            endFreezeCount();
+        }
+        else{
+            timeCounter.color = Color.white;
+            timeCounter.text = minutes.ToString("00") + ":" + currentTime.ToString("00");
+        }
     }
+
+    public void StartFreezeCount(float freezeDuration){
+        this.freezeDuration = freezeDuration;
+        freezeEndTime = currentTime + freezeDuration;
+    }
+    private void endFreezeCount(){
+        currentTime -= this.freezeDuration; 
+        Player.isFrozen = false;
+    }
+    
 }

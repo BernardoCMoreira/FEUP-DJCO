@@ -32,11 +32,10 @@ public class EnemyBullet : MonoBehaviour
         }           
        
         if(hitInfo.attachedRigidbody && (hitInfo.attachedRigidbody.name == "Player")){
-            PlayerBehavior pb = hitInfo.GetComponent<PlayerBehavior>();
+            Player pb = hitInfo.GetComponent<Player>();
             if(pb!= null){
                 pb.TakeDamage(damage);
             }
-
             Destroy(gameObject);
         }
     }

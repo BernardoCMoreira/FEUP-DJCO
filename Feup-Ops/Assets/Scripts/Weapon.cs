@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             /*if(lookAngle > 90f && lookAngle < 180f) {
-                PlayerBehavior playerBehavior = (PlayerBehavior) player.GetComponent(typeof(PlayerBehavior));
+                Player Player = (Player) player.GetComponent(typeof(Player));
             }*/
 
             GameObject bulletClone = Instantiate(bullet1);
