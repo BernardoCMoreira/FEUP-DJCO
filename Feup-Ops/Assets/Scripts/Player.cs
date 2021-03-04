@@ -110,7 +110,6 @@ public class Player : MonoBehaviour
         
         health -= damage; 
         healthBar.SetHealth(health);
-        Debug.Log("health: " + health);
     }
 
    void OnCollisionEnter2D(Collision2D col)
@@ -132,6 +131,8 @@ public class Player : MonoBehaviour
         if(col.gameObject.tag == "Heart"){ 
             Destroy(col.gameObject);
             health += 20;
+            healthBar.SetHealth(health);
+
         }
     }
 
