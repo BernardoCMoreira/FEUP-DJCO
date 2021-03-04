@@ -626,7 +626,7 @@ PrefabInstance:
     - target: {fileID: 3474428649041792454, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3474428650233318273, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
@@ -646,7 +646,7 @@ PrefabInstance:
     - target: {fileID: 3474428650233318278, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3474428650233318284, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
@@ -736,7 +736,7 @@ PrefabInstance:
     - target: {fileID: 3474428650335434742, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11867d1b67a2db240a7ed1af69e3b6a4, type: 3}
@@ -2441,7 +2441,7 @@ GameObject:
   - component: {fileID: 1804226931}
   - component: {fileID: 1804226934}
   - component: {fileID: 1804226932}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3012,6 +3012,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 1752397603952703959, guid: 21eb862ece9448346847f9be0554b761,
+        type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752397604606409856, guid: 21eb862ece9448346847f9be0554b761,
+        type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752397605349790643, guid: 21eb862ece9448346847f9be0554b761,
+        type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1752397605539327299, guid: 21eb862ece9448346847f9be0554b761,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -3021,6 +3036,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752397605539327308, guid: 21eb862ece9448346847f9be0554b761,
+        type: 3}
+      propertyPath: m_Layer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21eb862ece9448346847f9be0554b761, type: 3}
