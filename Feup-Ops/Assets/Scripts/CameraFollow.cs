@@ -16,20 +16,20 @@ public class CameraFollow : MonoBehaviour
         Debug.Log(target.position.y);
 
 
-        if(target.position.x > 16f && target.position.y >= -6f) {
-            camPosition = new Vector3(30f, gameObject.transform.position.y, -10f); 
+        if(target.position.x > 16f && target.position.y >= -6f) { /*top right*/
+            camPosition = new Vector3(30.85f, gameObject.transform.position.y, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
-        else if(target.position.x <= 16f && target.position.y >= -6f) {
-             camPosition = new Vector3(1f, gameObject.transform.position.y, -10f); 
+        else if(target.position.x <= 16f && target.position.y >= -6f) { /* top left */
+             camPosition = new Vector3(1.25f, gameObject.transform.position.y, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
-        else if(target.position.x <= 16f && target.position.y < -6f) {
-             camPosition = new Vector3(1f, -13f, -10f); 
+        else if(target.position.x <= 16f && target.position.y < -6f) { /* bottom left */
+             camPosition = new Vector3(1.25f, -13.8f, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
-        else if(target.position.x > 16f && target.position.y <-6f) {
-             camPosition = new Vector3(30f, -13f, -10f); 
+        else if(target.position.x > 16f && target.position.y <-6f) { /*bottom right*/
+             camPosition = new Vector3(30.85f, -13.8f, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
     }
