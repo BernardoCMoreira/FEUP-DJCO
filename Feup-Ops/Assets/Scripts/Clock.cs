@@ -7,6 +7,8 @@ public class Clock : MonoBehaviour
 {
 
     [SerializeField] Text timeCounter;
+    [SerializeField] Text scoreBoard;
+
     private float day;
     float currentTime = 0f;
     float startingTime = 0f;
@@ -38,6 +40,9 @@ public class Clock : MonoBehaviour
             timeCounter.color = Color.white;
             timeCounter.text = minutes.ToString("00") + ":" + currentTime.ToString("00");
         }
+
+        scoreBoard.text = "Score: " + Player.score;
+
     }
 
     public void StartFreezeCount(float freezeDuration){

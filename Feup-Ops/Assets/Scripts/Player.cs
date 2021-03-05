@@ -18,10 +18,6 @@ public class Player : MonoBehaviour
     private bool space;
     private float speed; 
 
-    /* Player game vars */
-    private int score;
-
-
     /* Aux */
     public bool facingRight;
     public int MAX_HIGH = 5;
@@ -30,6 +26,7 @@ public class Player : MonoBehaviour
     /* Global vars*/
     public static bool isFrozen;
     public static int level;
+    public static int score;
 
     /*Life bar*/
 
@@ -121,7 +118,7 @@ public class Player : MonoBehaviour
     {           
         if(col.gameObject.tag == "Book"){ 
             Destroy(col.gameObject);
-            score += 10;
+            score += 1;
         }
         if(col.gameObject.tag == "Frozen"){ 
             Destroy(col.gameObject);
