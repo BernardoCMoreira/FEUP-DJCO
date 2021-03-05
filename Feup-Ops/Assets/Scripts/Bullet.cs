@@ -38,9 +38,9 @@ public class Bullet : MonoBehaviour
 
         if(hitInfo.attachedRigidbody && hitInfo.attachedRigidbody.tag=="Explode"){
             Debug.Log("Destroy");
-                            animate();
-   
-                Destroy(gameObject);
+            
+            animate();
+            Destroy(gameObject);
         }
     }
 

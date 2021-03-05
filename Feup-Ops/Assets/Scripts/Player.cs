@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
 
     /* Global vars*/
     public static bool isFrozen;
+    public static int level;
 
     /*Life bar*/
 
@@ -42,6 +43,7 @@ public class Player : MonoBehaviour
         facingRight = true;
         isFrozen = false;
         healthBar.SetMaxHealth(health);
+        level = 1;
     }
 
     bool touchGround(){
@@ -70,6 +72,9 @@ public class Player : MonoBehaviour
     }
 
     void FixedUpdate(){
+
+        updateLevel();
+
         if(space){
             rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
             space = false;
@@ -137,6 +142,17 @@ public class Player : MonoBehaviour
     }
 
 
+    private void updateLevel(){
+        if(gameObject.transform.position.x > -15f && gameObject.transform.position.x < 16f &&
+            gameObject.transform.position.y > - 10f && gameObject.transform.position.y < 10f ) {
+            level = 1;
+        } else if (gameObject.transform.position.x >= 16f && gameObject.transform.position.x < 32f &&
+            gameObject.transform.position.y > - 10f && gameObject.transform.position.y < 10f ) {
+                level = 2;
+            }
+        
+
+    }
 
 
 }
