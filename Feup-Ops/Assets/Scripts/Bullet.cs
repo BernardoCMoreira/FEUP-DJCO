@@ -34,8 +34,13 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
         }
 
-        if(hitInfo.attachedRigidbody && hitInfo.attachedRigidbody.tag=="Explode"){
-            Debug.Log("Destroy");
+        if(hitInfo.attachedRigidbody && hitInfo.attachedRigidbody.name=="Water"){
+            animate2();
+            Destroy(gameObject);
+            Destroy(hitInfo.gameObject, 0.3f);
+        }
+
+        else if(hitInfo.attachedRigidbody && hitInfo.attachedRigidbody.tag=="Explode"){
             animate();
             Destroy(gameObject);
         }
@@ -43,6 +48,12 @@ public class Bullet : MonoBehaviour
 
     private void animate(){
         GameObject x = Instantiate(bulletAnim, transform.position, transform.rotation);
-        Destroy(x, 0.7f);
+        Destroy(x, 0.6f);
+    }
+
+    private void animate2(){
+        GameObject x = Instantiate(bulletAnim, transform.position, transform.rotation);
+        x.transform.localScale = new Vector3(25f, 25f, 0f);
+        Destroy(x, 0.5f);
     }
 }

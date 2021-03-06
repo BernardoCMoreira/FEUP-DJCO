@@ -7,11 +7,17 @@ public class Elevator : MonoBehaviour {
 	float dirY, moveSpeed = 2f;
 	bool moveUp = true;
 
+	private float initialPos;
+
+	void Start(){
+		initialPos = transform.position.y;
+	}
+
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.y > 1f)
+		if (transform.position.y > initialPos+6.5f)
 			moveUp = false;
-		if (transform.position.y < -5f)
+		if (transform.position.y < initialPos)
 			moveUp = true;
 
 		if (moveUp)

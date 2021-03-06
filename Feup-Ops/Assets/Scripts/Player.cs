@@ -86,12 +86,12 @@ public class Player : MonoBehaviour
 
         if (rb.velocity.y >= 0)
         {
-            Physics2D.IgnoreLayerCollision(0, 8, true);
+            Physics2D.IgnoreLayerCollision(9, 8, true);
         }
         //else the collision will not be ignored
         else
         {
-            Physics2D.IgnoreLayerCollision(0, 8, false);
+            Physics2D.IgnoreLayerCollision(9, 8, false);
         }
 
     }

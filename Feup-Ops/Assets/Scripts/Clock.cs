@@ -26,9 +26,11 @@ public class Clock : MonoBehaviour
     void Update()
     {
         currentTime += 1  * Time.deltaTime;
-        if(currentTime == 60){
-            minutes ++ ;
-            currentTime = 0;
+        if(currentTime >= 60){
+            //minutes ++ ;
+            //currentTime = 0;
+            minutes = currentTime / 60;
+            
         }
         if(Player.isFrozen && currentTime < freezeEndTime){
             timeCounter.color = Color.red;
@@ -38,7 +40,7 @@ public class Clock : MonoBehaviour
         }
         else{
             timeCounter.color = Color.white;
-            timeCounter.text = minutes.ToString("00") + ":" + currentTime.ToString("00");
+            timeCounter.text = (Mathf.Floor(currentTime/60)).ToString("00") + ":" + (currentTime%60).ToString("00");
         }
 
         scoreBoard.text = "Score: " + Player.score;

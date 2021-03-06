@@ -5,6 +5,24 @@ TextureImporter:
   - first:
       213: 5647327177761823055
     second: Office_furniture_set_1
+  - first:
+      213: -2098382165268343909
+    second: Office_furniture_set_1
+  - first:
+      213: 2948562267548549667
+    second: Office_furniture_set_2
+  - first:
+      213: 8131771532837215236
+    second: Office_furniture_set_3
+  - first:
+      213: -3355554676511334824
+    second: Office_furniture_set_4
+  - first:
+      213: 2533081262903618022
+    second: Office_furniture_set_5
+  - first:
+      213: -219078006538219764
+    second: Office_furniture_set_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,19 +123,124 @@ TextureImporter:
       name: Office_furniture_set_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 224
         y: 0
-        width: 16
-        height: 49
+        width: 29
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4917e8b5265f5e40800000000000000
-      internalID: 5647327177761823055
+      spriteID: b935a24d98c01e2e0800000000000000
+      internalID: -2098382165268343909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_furniture_set_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 95
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3220a5b92c56be820800000000000000
+      internalID: 2948562267548549667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_furniture_set_3
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 48
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c5569002bd9d070800000000000000
+      internalID: 8131771532837215236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_furniture_set_4
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 107
+        width: 30
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e142adcccae61d0800000000000000
+      internalID: -3355554676511334824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_furniture_set_5
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 0
+        width: 48
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e9619edcff472320800000000000000
+      internalID: 2533081262903618022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Office_furniture_set_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f403ab6bda5fcf0800000000000000
+      internalID: -219078006538219764
       vertices: []
       indices: 
       edges: []
