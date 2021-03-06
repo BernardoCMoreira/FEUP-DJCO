@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {   
     public Transform target;
-    public float dampTime = 0.4f;
+    public float dampTime = 0.7f;
     private Vector3 camPosition;
     private Vector3 velocity = Vector3.zero;
 
@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
         //Debug.Log(player.position.x);
         //camPosition = new Vector3(player.position.x, player.position.y, -10f);
 
-        Debug.Log(target.position.y);
+        
 
 
         if(target.position.x > 16f && target.position.y >= -6f) { /*top right*/

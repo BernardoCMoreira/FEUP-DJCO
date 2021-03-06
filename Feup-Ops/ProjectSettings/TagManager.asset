@@ -9,6 +9,7 @@ TagManager:
   - Frozen
   - Clock
   - Heart
+  - LevelElements
   layers:
   - Default
   - TransparentFX

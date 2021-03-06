@@ -30,15 +30,12 @@ public class Bullet : MonoBehaviour
                 if(enemy!= null){
                     enemy.TakeDamage(damage);
                 }
-
                 animate();
-   
                 Destroy(gameObject);
         }
 
         if(hitInfo.attachedRigidbody && hitInfo.attachedRigidbody.tag=="Explode"){
             Debug.Log("Destroy");
-            
             animate();
             Destroy(gameObject);
         }
