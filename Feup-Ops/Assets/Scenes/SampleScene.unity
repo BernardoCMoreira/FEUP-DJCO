@@ -1565,6 +1565,11 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.11040977
       objectReference: {fileID: 0}
+    - target: {fileID: 3474428650233318275, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3474428650233318278, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_Name
@@ -1650,6 +1655,11 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2101317309}
+    - target: {fileID: 3474428650233318287, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
+      propertyPath: jumpForce
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3474428650233318287, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: CameraShake

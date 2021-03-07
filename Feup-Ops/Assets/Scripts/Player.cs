@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
     public bool facingRight;
     public int MAX_HIGH = 5;
     public int health = 100;
+    public float jumpForce = 5;
+    public float playerSpeed = 3;
 
     /* Global vars*/
     public static bool isFrozen;
@@ -29,7 +31,6 @@ public class Player : MonoBehaviour
     public static int score;
 
     /*Life bar*/
-
     public HealthBar healthBar;
 
     void Start()
@@ -55,12 +56,12 @@ public class Player : MonoBehaviour
             Die();
         }
 
-        if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && touchGround()){
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey ("w")) && touchGround()){
             anim.SetTrigger("isJumping");
             space=true;
         }
         
-        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)){
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey ("d") || Input.GetKey ("a")){
             anim.SetBool("isRunning", true);
         } else {
             anim.SetBool("isRunning", false);
@@ -73,7 +74,7 @@ public class Player : MonoBehaviour
         updateLevel();
 
         if(space){
-            rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             space = false;
         }
 
@@ -82,7 +83,7 @@ public class Player : MonoBehaviour
         else if(speed < 0 && facingRight)
             Flip();
 
-        rb.velocity = new Vector2 (speed*2, rb.velocity.y);
+        rb.velocity = new Vector2 (speed*playerSpeed, rb.velocity.y);
 
         if (rb.velocity.y >= 0)
         {

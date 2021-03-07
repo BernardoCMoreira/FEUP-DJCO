@@ -25,12 +25,13 @@ public class Enemy : MonoBehaviour
     }
     
     void Update(){
-        if(Player.isFrozen){
-            return;
-        }
         if(health <= 0 ){
             anim.SetBool("isDying", true);
             Die();
+        }
+        
+        if(Player.isFrozen){
+            return;
         }
 
         if(target == null) {
