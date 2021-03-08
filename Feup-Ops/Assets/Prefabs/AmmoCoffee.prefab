@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -2579681209290615788}
   m_Layer: 0
   m_Name: AmmoCoffee
-  m_TagString: Untagged
+  m_TagString: AmmoCoffee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

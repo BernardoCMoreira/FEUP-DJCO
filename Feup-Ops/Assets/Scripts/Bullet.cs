@@ -19,13 +19,13 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo){
         // TODO: mudar para tags
-        if(hitInfo.attachedRigidbody && ((hitInfo.attachedRigidbody.name) == "Player") ){
+        if(hitInfo.attachedRigidbody && ((hitInfo.attachedRigidbody.tag) == "Player") ){
             return;
         }           
 
         if(hitInfo.attachedRigidbody && 
-            ((rb.name == "AmmoClock(Clone)" && hitInfo.attachedRigidbody.name == "DiscoEnemy") ||
-             (rb.name == "AmmoCoffee(Clone)" && hitInfo.attachedRigidbody.name == "BeerEnemy"))){
+            ((rb.tag == "AmmoClock" && hitInfo.attachedRigidbody.tag == "DiscoEnemy") ||
+             (rb.tag == "AmmoCoffee" && hitInfo.attachedRigidbody.tag == "BeerEnemy"))){
                 Enemy enemy  = hitInfo.GetComponent<Enemy>();
                 if(enemy!= null){
                     enemy.TakeDamage(damage);

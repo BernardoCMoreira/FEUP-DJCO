@@ -13,23 +13,21 @@ public class CameraFollow : MonoBehaviour
         //Debug.Log(player.position.x);
         //camPosition = new Vector3(player.position.x, player.position.y, -10f);
 
-        
-
 
         if(target.position.x > 16f && target.position.y >= -6f) { /*top right*/
-            camPosition = new Vector3(30.85f, gameObject.transform.position.y, -10f); 
+            camPosition = new Vector3(34f, 0, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
         else if(target.position.x <= 16f && target.position.y >= -6f) { /* top left */
-             camPosition = new Vector3(1.25f, gameObject.transform.position.y, -10f); 
+             camPosition = new Vector3(0f,  0f, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
         else if(target.position.x <= 16f && target.position.y < -6f) { /* bottom left */
-             camPosition = new Vector3(1.25f, -13.8f, -10f); 
+             camPosition = new Vector3(0f, -15.3f, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
         else if(target.position.x > 16f && target.position.y <-6f) { /*bottom right*/
-             camPosition = new Vector3(30.85f, -13.8f, -10f); 
+             camPosition = new Vector3(34f, -15.3f, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
     }

@@ -8,14 +8,16 @@ public class Enemy : MonoBehaviour
 
     private Transform target;
 
-    public GameObject projectile;
-    private float startTimeBtwShots = 2.5f;
     private float timeBtwShots;
+
 
     /* Public vars */
     public float speed = 0.25f;
     public int health = 100;
     public int MinDist = 5;
+    public GameObject projectile;
+    public float startTimeBtwShots = 1f;
+
 
     void Start()
     {   
@@ -56,7 +58,7 @@ public class Enemy : MonoBehaviour
 
    void OnCollisionEnter2D(Collision2D col)
     {           
-        if(col.gameObject.name == "Player"){ 
+        if(col.gameObject.tag == "Player"){ 
             Player pb = col.gameObject.GetComponent<Player>();
             if(pb!=null) {
                 pb.Die();

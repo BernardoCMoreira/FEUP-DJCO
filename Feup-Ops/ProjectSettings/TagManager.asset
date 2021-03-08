@@ -10,6 +10,10 @@ TagManager:
   - Clock
   - Heart
   - LevelElements
+  - AmmoClock
+  - AmmoCoffee
+  - BeerEnemy
+  - DiscoEnemy
   layers:
   - Default
   - TransparentFX
@@ -19,9 +23,9 @@ TagManager:
   - UI
   - 
   - 
-  - Elevator
+  - Platform
   - Player
-  - 
+  - WalkThrough
   - 
   - 
   - 

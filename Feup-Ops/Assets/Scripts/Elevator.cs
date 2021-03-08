@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class Elevator : MonoBehaviour {
 	
+
 	float dirY, moveSpeed = 2f;
 	bool moveUp = true;
 
 	private float initialPos;
+
+	
+	/* Public vars */
+	public float distance;
 
 	void Start(){
 		initialPos = transform.position.y;
@@ -15,7 +20,7 @@ public class Elevator : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.y > initialPos+6.5f)
+		if (transform.position.y > initialPos+distance)
 			moveUp = false;
 		if (transform.position.y < initialPos)
 			moveUp = true;
