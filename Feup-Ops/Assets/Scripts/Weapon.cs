@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public float bulletSpeed = 10f;
     public GameObject player;
+    public float timeBtwShots = 2;
 
     Vector2 lookDirection;
     float lookAngle;
@@ -41,4 +42,5 @@ public class Weapon : MonoBehaviour
             bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
         }
     }
+
 }
