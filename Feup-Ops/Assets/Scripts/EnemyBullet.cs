@@ -22,6 +22,8 @@ public class EnemyBullet : MonoBehaviour
             } else {
                 rb.velocity = -transform.right * speed;
             }
+
+            Destroy(gameObject, 4);
     }
 
 

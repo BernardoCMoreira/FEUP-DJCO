@@ -56,31 +56,32 @@ public class Player : MonoBehaviour
             Die();
         }
 
-        if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey ("w")) && touchGround()){
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey ("w")) && touchGround()){            
             anim.SetTrigger("isJumping");
             space=true;
         }
         
-        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey ("d") || Input.GetKey ("a")){
-            anim.SetBool("isRunning", true);
+        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey ("d") || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey ("a")) {
+            anim.SetBool("isWalkingRight", true);
         } else {
-            anim.SetBool("isRunning", false);
+            anim.SetBool("isWalkingRight", false);
         }
+
         speed = Input.GetAxis("Horizontal");
     }
 
     void FixedUpdate(){
-
         updateLevel();
-
+        
         if(space){
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             space = false;
         }
 
-        if(speed > 0 && !facingRight)
+        float h = Input.GetAxis("Horizontal");
+        if(h > 0 && !facingRight)
             Flip();
-        else if(speed < 0 && facingRight)
+        else if(h < 0 && facingRight)
             Flip();
 
         rb.velocity = new Vector2 (speed*playerSpeed, rb.velocity.y);
@@ -90,18 +91,18 @@ public class Player : MonoBehaviour
             Physics2D.IgnoreLayerCollision(9, 8, true);
             Physics2D.IgnoreLayerCollision(9, 10, true);
         }
-        //else the collision will not be ignored
         else
         {
             Physics2D.IgnoreLayerCollision(9, 8, false);
         }
-
     }
 
-    private void Flip ()
+    void Flip ()
     {
         facingRight = !facingRight;
-        transform.Rotate(0f, 180f, 0f);
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 
     public void Die(){
@@ -130,13 +131,11 @@ public class Player : MonoBehaviour
                 Debug.Log(GetComponent<Clock>());
                 c.GetComponent<Clock>().StartFreezeCount(5);
             }
-                
         }
         if(col.gameObject.tag == "Heart"){ 
             Destroy(col.gameObject);
             health += 20;
             healthBar.SetHealth(health);
-
         }
     }
 
@@ -149,9 +148,16 @@ public class Player : MonoBehaviour
             gameObject.transform.position.y > - 10f && gameObject.transform.position.y < 10f ) {
                 level = 2;
             }
-        
-
     }
 
 
+    public void shoot(float xCoord, float yCoord){
+        if(facingRight && xCoord < 0){
+            anim.SetTrigger("FacingRight_LeftShot");
+        }
+        else if(!facingRight && xCoord > 0) {
+            anim.SetTrigger("FacingLeft_RightShot");
+            facingRight=false;
+        }
+    }
 }
