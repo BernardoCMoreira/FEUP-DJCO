@@ -25,13 +25,22 @@ public class Bullet : MonoBehaviour
 
         if(hitInfo.attachedRigidbody && 
             ((rb.tag == "AmmoClock" && hitInfo.attachedRigidbody.tag == "DiscoEnemy") ||
-             (rb.tag == "AmmoCoffee" && hitInfo.attachedRigidbody.tag == "BeerEnemy"))){
+             (rb.tag == "AmmoCoffee" && hitInfo.attachedRigidbody.tag == "BeerEnemy")) ){
                 Enemy enemy  = hitInfo.GetComponent<Enemy>();
                 if(enemy!= null){
                     enemy.TakeDamage(damage);
                 }
                 animate();
                 Destroy(gameObject);
+        }
+
+        if(hitInfo.attachedRigidbody.tag == "BossEnemy"){
+            Boss boss = hitInfo.GetComponent<Boss>();
+            if(boss != null) {
+                boss.TakeDamage(damage);
+            }
+            animate();
+            Destroy(gameObject);
         }
 
         if(hitInfo.attachedRigidbody && hitInfo.attachedRigidbody.name=="Water"){

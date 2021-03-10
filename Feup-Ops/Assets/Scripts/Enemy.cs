@@ -14,13 +14,15 @@ public class Enemy : MonoBehaviour
     /* Public vars */
     public float speed = 0.25f;
     public int health = 100;
-    public int MinDist = 5;
+    public int MinDist;
     public GameObject projectile;
     public float startTimeBtwShots = 1f;
+    private bool facingRight;
 
 
     void Start()
     {   
+        facingRight = true;
         timeBtwShots = startTimeBtwShots;
         anim = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -35,6 +37,11 @@ public class Enemy : MonoBehaviour
         if(Player.isFrozen){
             return;
         }
+
+        if(transform.position.x < target.position.x && !facingRight)
+            Flip();
+        else if(transform.position.x > target.position.x  && facingRight)
+            Flip();
 
         if(target == null) {
             Debug.Log("Player lost!");
@@ -92,4 +99,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    void Flip ()
+    {
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 }

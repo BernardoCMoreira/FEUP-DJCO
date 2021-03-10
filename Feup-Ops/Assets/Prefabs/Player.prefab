@@ -212,7 +212,7 @@ MonoBehaviour:
   bullet2: {fileID: 6221142508917939156, guid: 45273df536297f24c968779a53e3d801, type: 3}
   firePoint: {fileID: 6065175472752077547}
   bulletSpeed: 20
-  player: {fileID: 6065175472152922187}
+  target: {fileID: 0}
   timeBtwShots: 2
 --- !u!1 &6065175472737602178
 GameObject:
