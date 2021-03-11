@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     public CameraShake CameraShake;
 
+
     [SerializeField] public Transform feet;
     public LayerMask ground;
 
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     private float speed; 
 
     /* Aux */
+    public GameOverScreen gameOverScreen;
     public bool facingRight;
     public int MAX_HIGH = 5;
     public int health = 100;
@@ -106,7 +108,8 @@ public class Player : MonoBehaviour
     }
 
     public void Die(){
-        Destroy(gameObject, 1);
+        gameOverScreen.Setup(score);
+        //Destroy(gameObject, 1);
         Debug.Log("Player died");
     }
 
