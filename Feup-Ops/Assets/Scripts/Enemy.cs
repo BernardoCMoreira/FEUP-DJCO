@@ -21,11 +21,8 @@ public class Enemy : MonoBehaviour
     
     private bool facingRight;
 
-
-
     void Start()
     {   
-        
         facingRight = true;
         timeBtwShots = startTimeBtwShots;
         anim = GetComponent<Animator>();
@@ -39,7 +36,7 @@ public class Enemy : MonoBehaviour
             Die();
         }
         
-        if(Player.isFrozen){
+        if(Player.isFrozen || !target){
             return;
         }
 
@@ -47,11 +44,6 @@ public class Enemy : MonoBehaviour
             Flip();
         else if(transform.position.x > target.position.x  && facingRight)
             Flip();
-
-        if(target == null) {
-            Debug.Log("Player lost!");
-            //TODO: redirecionar menu
-        }
         else {
             if((Vector2.Distance(transform.position, target.position) <= MinDist) && health > 0) {
                 anim.SetBool("isWalking", true);
@@ -85,9 +77,6 @@ public class Enemy : MonoBehaviour
     }
 
     void attackPlayer(){
-        //lookAtPlayer(); >> LookAt(..) not working
-        //lookAtPlayer();
-
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed*Time.deltaTime);
 
         if (timeBtwShots <=0){
@@ -95,14 +84,7 @@ public class Enemy : MonoBehaviour
             timeBtwShots = startTimeBtwShots;
         } else{
             timeBtwShots -=Time.deltaTime;
-        }
-        
-    }
-
-    void lookAtPlayer(){
-        if(target.position.x < transform.position.x){
-            transform.Rotate(0f, 180f, 0f);
-        }
+        }   
     }
 
     void Flip ()

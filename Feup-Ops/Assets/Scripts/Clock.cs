@@ -27,12 +27,9 @@ public class Clock : MonoBehaviour
     {
         currentTime += 1  * Time.deltaTime;
         if(currentTime >= 60){
-            //minutes ++ ;
-            //currentTime = 0;
             minutes = currentTime / 60;
-            
         }
-        if(Player.isFrozen && currentTime < freezeEndTime){
+        if((Player.isFrozen && currentTime < freezeEndTime) || !(GameObject.FindGameObjectWithTag("Player")) ){
             timeCounter.color = Color.red;
         }
         else if(Player.isFrozen && (currentTime >= freezeEndTime)){
@@ -42,15 +39,15 @@ public class Clock : MonoBehaviour
             timeCounter.color = Color.white;
             timeCounter.text = (Mathf.Floor(currentTime/60)).ToString("00") + ":" + (currentTime%60).ToString("00");
         }
-
+        
         scoreBoard.text = "Score: " + Player.score;
-
     }
 
     public void StartFreezeCount(float freezeDuration){
         this.freezeDuration = freezeDuration;
         freezeEndTime = currentTime + freezeDuration;
     }
+
     private void endFreezeCount(){
         currentTime -= this.freezeDuration; 
         Player.isFrozen = false;

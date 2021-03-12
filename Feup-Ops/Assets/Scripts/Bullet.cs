@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
         }
 
-        if(hitInfo.attachedRigidbody.tag == "BossEnemy"){
+        if(hitInfo.attachedRigidbody && hitInfo.attachedRigidbody.tag == "BossEnemy"){
             Boss boss = hitInfo.GetComponent<Boss>();
             if(boss != null) {
                 boss.TakeDamage(damage);

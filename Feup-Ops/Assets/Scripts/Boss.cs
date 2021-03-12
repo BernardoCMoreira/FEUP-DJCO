@@ -34,6 +34,10 @@ public class Boss : MonoBehaviour
             Die();
         }
 
+        if(Player.isFrozen || !target){
+            return;
+        }
+
         if((Vector2.Distance(transform.position, target.transform.position) <= MinDist) && health > 0) {
             generateEnemies();
         }

@@ -10,9 +10,9 @@ public class CameraFollow : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     void Update(){
-        //Debug.Log(player.position.x);
-        //camPosition = new Vector3(player.position.x, player.position.y, -10f);
-
+        if(!target){
+            return;
+        }
 
         if(target.position.x > 16f && target.position.y >= -6f) { /*top right*/
             camPosition = new Vector3(34f, 0, -10f); 
