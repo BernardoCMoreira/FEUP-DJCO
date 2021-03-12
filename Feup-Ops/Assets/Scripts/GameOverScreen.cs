@@ -7,10 +7,12 @@ public class GameOverScreen : MonoBehaviour
 {   
 
     public Text pointsText;
+    public Text timeText;
 
-    public void Setup(int score){
+    public void Setup(int score, string time){
         gameObject.SetActive(true);
         pointsText.text="SCORE : " + score.ToString();
+        timeText.text = "TIME : " + time;
     }
 
     public void ExitGame(){

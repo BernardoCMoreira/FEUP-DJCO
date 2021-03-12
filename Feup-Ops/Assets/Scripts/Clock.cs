@@ -55,5 +55,9 @@ public class Clock : MonoBehaviour
         currentTime -= this.freezeDuration; 
         Player.isFrozen = false;
     }
+
+    public string getCurrentTime(){
+        return (Mathf.Floor(currentTime/60)).ToString("00") + ":" + (currentTime%60).ToString("00");
+    }
     
 }

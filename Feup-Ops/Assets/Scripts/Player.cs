@@ -108,14 +108,19 @@ public class Player : MonoBehaviour
     }
 
     public void Die(){
-        gameOverScreen.Setup(score);
-        //Destroy(gameObject, 1);
+        string time = "00:00";
+        GameObject c = GameObject.FindGameObjectWithTag("Clock");
+            if(c!=null){
+                Debug.Log(GetComponent<Clock>());
+                time = c.GetComponent<Clock>().getCurrentTime();
+            }
+        gameOverScreen.Setup(score, time);
+        Destroy(gameObject);
         Debug.Log("Player died");
     }
 
     public void TakeDamage(int damage){
         StartCoroutine(CameraShake.Shake(.15f, .4f));  
-        
         health -= damage; 
         healthBar.SetHealth(health);
     }
