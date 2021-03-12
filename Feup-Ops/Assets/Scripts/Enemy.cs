@@ -17,15 +17,20 @@ public class Enemy : MonoBehaviour
     public int MinDist;
     public GameObject projectile;
     public float startTimeBtwShots = 1f;
+    public HealthBar healthBar;
+    
     private bool facingRight;
+
 
 
     void Start()
     {   
+        
         facingRight = true;
         timeBtwShots = startTimeBtwShots;
         anim = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        healthBar.SetMaxHealth(health);
     }
     
     void Update(){
@@ -61,6 +66,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage; 
+        healthBar.SetHealth(health);
     }
 
    void OnCollisionEnter2D(Collision2D col)
