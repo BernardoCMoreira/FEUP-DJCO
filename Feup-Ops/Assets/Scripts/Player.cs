@@ -120,7 +120,7 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
-        StartCoroutine(CameraShake.Shake(.15f, .4f));  
+        StartCoroutine(CameraShake.Shake(.15f));  
         health -= damage; 
         healthBar.SetHealth(health);
     }

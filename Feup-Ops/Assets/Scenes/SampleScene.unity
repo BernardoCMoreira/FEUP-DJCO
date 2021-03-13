@@ -7999,6 +7999,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3913997589376362244, guid: 1510f783a6570b74dbb105c1db674497,
+        type: 3}
+      propertyPath: MinDist
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3913997589376362244, guid: 1510f783a6570b74dbb105c1db674497,
+        type: 3}
+      propertyPath: startTimeBtwShots
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3913997589376362247, guid: 1510f783a6570b74dbb105c1db674497,
         type: 3}
       propertyPath: m_Name
