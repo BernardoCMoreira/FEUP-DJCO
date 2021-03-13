@@ -14,23 +14,22 @@ public class CameraFollow : MonoBehaviour
             return;
         }
 
-        if(target.position.x > 16f && target.position.y >= -6f) { /*top right*/
-            camPosition = new Vector3(34f, 0, -10f); 
+        if(target.position.x > -18f && target.position.x < 18f) { /*1*/
+            camPosition = new Vector3(1f, -2f, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
-        else if(target.position.x <= 16f && target.position.y >= -6f) { /* top left */
-             camPosition = new Vector3(0f,  0f, -10f); 
+        else if(target.position.x >= 18f && target.position.x < 56f) { //2
+            camPosition = new Vector3(38f,  -2f, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
-        else if(target.position.x <= 16f && target.position.y < -6f) { /* bottom left */
-             camPosition = new Vector3(0f, -15.3f, -10f); 
+        else if(target.position.x >= 56f && target.position.x < 92f) { // 3
+            camPosition = new Vector3(78f, -2f, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
-        else if(target.position.x > 16f && target.position.y <-6f) { /*bottom right*/
-             camPosition = new Vector3(34f, -15.3f, -10f); 
+        else if(target.position.x >= 92f) { // 4
+            camPosition = new Vector3(114f, -2f, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
     }
-
 
 }
