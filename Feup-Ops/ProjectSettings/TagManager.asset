@@ -15,6 +15,7 @@ TagManager:
   - BeerEnemy
   - DiscoEnemy
   - BossEnemy
+  - Scroll
   layers:
   - Default
   - TransparentFX
