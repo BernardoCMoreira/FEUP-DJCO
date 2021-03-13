@@ -305,7 +305,7 @@ MonoBehaviour:
   projectile: {fileID: 804140205228949417, guid: 497af4ca8e0754d47be5d4c9c660509c,
     type: 3}
   startTimeBtwShots: 2.5
-  healthBar: {fileID: 196461976234848992}
+  healthBar: {fileID: 4211816755541285597}
 --- !u!1001 &3913997587516184307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -456,9 +456,9 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3913997587516184307}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &196461976234848992 stripped
+--- !u!114 &4211816755541285597 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3812483116496987155, guid: 44e0e9de125814843bfd47719d75f46e,
+  m_CorrespondingSourceObject: {fileID: 874315255381019694, guid: 44e0e9de125814843bfd47719d75f46e,
     type: 3}
   m_PrefabInstance: {fileID: 3913997587516184307}
   m_PrefabAsset: {fileID: 0}

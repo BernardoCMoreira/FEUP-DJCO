@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
     public static bool isFrozen;
     public static int level;
     public static int score;
+    public static int scroll;
 
     /*Life bar*/
     public HealthBar healthBar;
@@ -39,7 +40,8 @@ public class Player : MonoBehaviour
     {   
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        score= 0;
+        score = 0;
+        scroll = 0;
         facingRight = true;
         isFrozen = false;
         healthBar.SetMaxHealth(health);
@@ -134,11 +136,13 @@ public class Player : MonoBehaviour
             Destroy(col.gameObject);
             score += 1;
         }
+
         if(col.gameObject.tag == "Scroll"){ 
             SoundManager.playSound("collectable", 0.6f);
             Destroy(col.gameObject);
-            score += 10;
+            scroll += 1;
         }
+        
         if(col.gameObject.tag == "Frozen"){ 
             SoundManager.playSound("collectable", 0.6f);
             Destroy(col.gameObject);
