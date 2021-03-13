@@ -73,6 +73,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {   
+        SoundManager.playSound("enemyDeath");
         Destroy(gameObject, 0.5f);
     }
 
