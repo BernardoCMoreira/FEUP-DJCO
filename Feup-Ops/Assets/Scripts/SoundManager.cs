@@ -6,40 +6,42 @@ public class SoundManager : MonoBehaviour
 {
     public static AudioClip playerHitSound, playerShootSound, playerJumpSound;
     public static AudioClip enemyNearSound, enemyDeathSound;
-    public static AudioClip bossAttack;
+    public static AudioClip bossAttackSound;
+    public static AudioClip collectableSound;
     static AudioSource audioSrc;
 
     void Start()
     {
         /*player related*/
-        playerHitSound = Resources.Load<AudioClip>("playerHit");
-        playerShootSound = Resources.Load<AudioClip>("playerShoot");
-        playerJumpSound = Resources.Load<AudioClip>("playerJump");
+        //playerHitSound = Resources.Load<AudioClip>("Sound/playerHit");
+        playerShootSound = Resources.Load<AudioClip>("Sound/playerShoot");
+        playerJumpSound = Resources.Load<AudioClip>("Sound/playerJump");
 
         /* enemy related */
-        enemyNearSound = Resources.Load<AudioClip>("enemyNear");
-        enemyDeathSound = Resources.Load<AudioClip>("Sound/explosion_26");
-        bossAttack = Resources.Load<AudioClip>("bossAtack");
+        enemyDeathSound = Resources.Load<AudioClip>("Sound/enemyDeath");
+        bossAttackSound = Resources.Load<AudioClip>("Sound/enemyNear");
 
+        /* collectables related */
+        collectableSound = Resources.Load<AudioClip>("Sound/collectableSound");
         audioSrc = GetComponent<AudioSource>();
     }
     void Update()
     {}
 
-    public static void playSound(string clip){  
+    public static void playSound(string clip, float volume){  
 
         switch(clip) {
-            case "playerHit": audioSrc.PlayOneShot(playerHitSound);
+            case "playerHit": audioSrc.PlayOneShot(playerHitSound, volume);
             break;
-            case "playerShoot": audioSrc.PlayOneShot(playerShootSound);
+            case "playerShoot": audioSrc.PlayOneShot(playerShootSound, volume);
             break;
-            case "playerJump": audioSrc.PlayOneShot(playerJumpSound);
+            case "playerJump": audioSrc.PlayOneShot(playerJumpSound, volume);
             break;
-            case "enemyNear": audioSrc.PlayOneShot(enemyNearSound);
+            case "enemyDeath": audioSrc.PlayOneShot(enemyDeathSound, volume);
             break;
-            case "enemyDeath": audioSrc.PlayOneShot(enemyDeathSound, 1.0f); /* clip, volume */
+            case "bossAtack": audioSrc.PlayOneShot(bossAttackSound, volume);
             break;
-            case "bossAtack": audioSrc.PlayOneShot(bossAttack);
+            case "collectable": audioSrc.PlayOneShot(collectableSound, volume);
             break;
         }
     }

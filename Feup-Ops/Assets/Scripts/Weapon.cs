@@ -32,6 +32,8 @@ public class Weapon : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            SoundManager.playSound("playerShoot", 0.6f);
+
             player.shoot(lookDirection.x, lookDirection.y);
 
             GameObject bulletClone = Instantiate(bullet1);
@@ -41,6 +43,8 @@ public class Weapon : MonoBehaviour
             bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
         }
         if (Input.GetMouseButtonDown(1)){
+            SoundManager.playSound("playerShoot", 0.6f);
+
             player.shoot(lookDirection.x, lookDirection.y);
 
             GameObject bulletClone = Instantiate(bullet2);

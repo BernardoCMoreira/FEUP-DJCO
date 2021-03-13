@@ -76,6 +76,7 @@ public class Player : MonoBehaviour
         updateLevel();
         
         if(space){
+            SoundManager.playSound("playerJump", 0.4f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             space = false;
         }
@@ -120,6 +121,7 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
+        //SoundManager.playSound("playerHit", 0.5f);
         StartCoroutine(CameraShake.Shake(.15f));  
         health -= damage; 
         healthBar.SetHealth(health);
@@ -128,14 +130,17 @@ public class Player : MonoBehaviour
    void OnCollisionEnter2D(Collision2D col)
     {           
         if(col.gameObject.tag == "Book"){ 
+            SoundManager.playSound("collectable", 0.6f);
             Destroy(col.gameObject);
             score += 1;
         }
         if(col.gameObject.tag == "Scroll"){ 
+            SoundManager.playSound("collectable", 0.6f);
             Destroy(col.gameObject);
             score += 10;
         }
         if(col.gameObject.tag == "Frozen"){ 
+            SoundManager.playSound("collectable", 0.6f);
             Destroy(col.gameObject);
             isFrozen = true;
             GameObject c = GameObject.FindGameObjectWithTag("Clock");
@@ -145,6 +150,7 @@ public class Player : MonoBehaviour
             }
         }
         if(col.gameObject.tag == "Heart"){ 
+            SoundManager.playSound("collectable", 0.6f);
             Destroy(col.gameObject);
             health += 20;
             healthBar.SetHealth(health);
