@@ -7,17 +7,20 @@ public class Door : MonoBehaviour
 {
     [SerializeField] Text Message;
     public Player player;
-    //public Boss boss;
+    public Boss boss;
     private bool collision;
 
     void Start(){
         Debug.Log("STARTED");
         collision = false;
     }
-    void OnTriggerEnter2D(Collider2D col){
+    void OnTriggerStay2D(Collider2D col){
         collision = true;
-        if (col.CompareTag("Player")){
-            Message.text = ("[O] to Open the door! ");
+        if (col.CompareTag("Player") && boss){
+            Message.text = ("This door is locked...");
+        }
+        else if(col.CompareTag("Player") && !boss){
+            Message.text = ("PRESS [O] TO OPEN");
         }
     }
     
@@ -29,13 +32,15 @@ public class Door : MonoBehaviour
     }
 
     void Update(){
+        if(boss) return; //boss ta vivo, nao faz nada
+
         if(collision){
 
             if(Input.GetKeyDown(KeyCode.O) && player.transform.position.y < -10f){
                 player.exitSecretLevel();
             }
 
-            else if(Input.GetKeyDown(KeyCode.O)  && player.transform.position.y >= -10f){
+            else if(Input.GetKeyDown(KeyCode.O) && player.transform.position.y >= -10f){
                 player.enterSecretLevel();
             }
         }
