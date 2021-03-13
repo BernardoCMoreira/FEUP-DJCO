@@ -131,6 +131,10 @@ public class Player : MonoBehaviour
             Destroy(col.gameObject);
             score += 1;
         }
+        if(col.gameObject.tag == "Scroll"){ 
+            Destroy(col.gameObject);
+            score += 10;
+        }
         if(col.gameObject.tag == "Frozen"){ 
             Destroy(col.gameObject);
             isFrozen = true;
@@ -167,5 +171,15 @@ public class Player : MonoBehaviour
             anim.SetTrigger("FacingLeft_RightShot");
             facingRight=false;
         }
+    }
+
+    public void enterSecretLevel(){
+        Debug.Log("ENTER Secret LEVEL! ................");
+        gameObject.transform.position = new Vector2(-17f,-22.5f);
+    }
+
+    public void exitSecretLevel(){
+        Debug.Log("Exit Secret LEVEL!");
+        gameObject.transform.position = new Vector2(-17f,-6f);
     }
 }

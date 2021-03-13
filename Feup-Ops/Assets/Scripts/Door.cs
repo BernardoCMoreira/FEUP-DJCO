@@ -6,32 +6,38 @@ using UnityEngine.UI;
 public class Door : MonoBehaviour
 {
     [SerializeField] Text Message;
-    private bool secretLevel;
+    public Player player;
+    //public Boss boss;
+    private bool collision;
 
     void Start(){
-        secretLevel = false;
+        Debug.Log("STARTED");
+        collision = false;
     }
     void OnTriggerEnter2D(Collider2D col){
-        
-        if(col.CompareTag("Player")){
-            Message.text = ("[O] to Open the door! ");
-              if(Input.GetKeyDown("o")){
-                Debug.Log("Door opened");
-            }
-        }
-    }
-
-    void OnTriggerStay2D(Collider2D col){
+        collision = true;
         if (col.CompareTag("Player")){
-            if(Input.GetKeyDown("o")){
-                Debug.Log("Door opened");
-            }
+            Message.text = ("[ESC] to Open the door! ");
         }
     }
-
+    
     void OnTriggerExit2D(Collider2D col){
+        collision = false;
         if (col.CompareTag("Player")){
             Message.text = ("");
+        }
+    }
+
+    void Update(){
+        if(collision){
+            
+            if(Input.GetKeyDown(KeyCode.O) && player.transform.position.y < -10f){
+                player.exitSecretLevel();
+            }
+
+            else if(Input.GetKeyDown(KeyCode.O)  && player.transform.position.y >= -10f){
+                player.enterSecretLevel();
+            }
         }
     }
 }

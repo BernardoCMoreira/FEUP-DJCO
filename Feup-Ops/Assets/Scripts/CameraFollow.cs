@@ -14,7 +14,12 @@ public class CameraFollow : MonoBehaviour
             return;
         }
 
-        if(target.position.x > -18f && target.position.x < 18f) { /*1*/
+        if(target.position.y < -10f){
+             camPosition = new Vector3(-2f, -18f, -10f); 
+            transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
+        }
+
+        else if(target.position.x > -18f && target.position.x < 18f) { /*1*/
             camPosition = new Vector3(1f, -2f, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
@@ -30,6 +35,7 @@ public class CameraFollow : MonoBehaviour
             camPosition = new Vector3(114f, -2f, -10f); 
             transform.position = Vector3.SmoothDamp(gameObject.transform.position, camPosition, ref velocity, dampTime);
         }
+        
     }
 
 }
