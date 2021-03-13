@@ -17,7 +17,7 @@ public class Door : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col){
         collision = true;
         if (col.CompareTag("Player")){
-            Message.text = ("[ESC] to Open the door! ");
+            Message.text = ("[O] to Open the door! ");
         }
     }
     
@@ -30,7 +30,7 @@ public class Door : MonoBehaviour
 
     void Update(){
         if(collision){
-            
+
             if(Input.GetKeyDown(KeyCode.O) && player.transform.position.y < -10f){
                 player.exitSecretLevel();
             }
