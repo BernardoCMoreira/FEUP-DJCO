@@ -9,7 +9,11 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public float bulletSpeed = 10f;
     public GameObject target;
-    public float timeBtwShots = 2;
+
+
+    public float fireRate = 0.5F;
+    private float nextFire = 0.0F;
+
 
     Vector2 lookDirection;
     float lookAngle;
@@ -30,7 +34,7 @@ public class Weapon : MonoBehaviour
         firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
        
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && (Time.time > nextFire))
         {
             SoundManager.playSound("playerShoot", 0.6f);
 
@@ -41,8 +45,9 @@ public class Weapon : MonoBehaviour
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
 
             bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
+            nextFire = Time.time + fireRate;
         }
-        if (Input.GetMouseButtonDown(1)){
+        if (Input.GetMouseButtonDown(1) && (Time.time > nextFire)){
             SoundManager.playSound("playerShoot", 0.6f);
 
             player.shoot(lookDirection.x, lookDirection.y);
@@ -52,6 +57,7 @@ public class Weapon : MonoBehaviour
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
 
             bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
+            nextFire = Time.time + fireRate;
         }
     }
 
