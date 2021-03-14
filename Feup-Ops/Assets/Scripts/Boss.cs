@@ -52,7 +52,7 @@ public class Boss : MonoBehaviour
 
 
         if (timeBtwSpawn <=0){
-            SoundManager.playSound("bossAtack", 0.45f);
+            SoundManager.playSound("bossAtack", 0.65f);
             anim.SetTrigger("isAttacking");
             Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
             timeBtwSpawn = startTimeSpawn;
