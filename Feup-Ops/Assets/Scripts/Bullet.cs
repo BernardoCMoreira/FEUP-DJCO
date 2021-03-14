@@ -34,6 +34,7 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
         }
 
+//switch para a attachedrigid body
         if(hitInfo.attachedRigidbody && hitInfo.attachedRigidbody.tag == "BossEnemy"){
             Boss boss = hitInfo.GetComponent<Boss>();
             if(boss != null) {
@@ -55,7 +56,7 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private void animate(){
+    private void animate(){ //passar bool para local scale
         GameObject x = Instantiate(bulletAnim, transform.position, transform.rotation);
         Destroy(x, 0.6f);
     }

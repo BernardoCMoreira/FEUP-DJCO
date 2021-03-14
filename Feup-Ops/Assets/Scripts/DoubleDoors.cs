@@ -7,36 +7,29 @@ public class DoubleDoors : MonoBehaviour
 {
     [SerializeField] Text Message;
     public Player player;
-    private bool collision;
     public GameOverScreen gameOverScreen;
     public GameOverScreen winScreen;
     public GameOverScreen winScreenMIT;
     public AudioSource audioSource;
 
-    void Start(){
-        collision = false;
-    }
+
     void OnTriggerStay2D(Collider2D col){
-        collision = true;
         if(col.CompareTag("Player")){
             Message.text = ("PRESS [O] TO END GAME");
+            
+            if(Input.GetKeyDown(KeyCode.O)){
+               endGame();
+            }
+        
         }
     }
     
     void OnTriggerExit2D(Collider2D col){
-        collision = false;
         if (col.CompareTag("Player")){
             Message.text = ("");
         }
     }
 
-    void Update(){
-        if(collision){
-            if(Input.GetKeyDown(KeyCode.O)){
-               endGame();
-            }
-        }
-    }
 
     public void endGame(){
         audioSource.Stop();
@@ -53,7 +46,7 @@ public class DoubleDoors : MonoBehaviour
          else if (Player.score == 10 && Player.scroll == 1){
             gameWonMIT();
         }
-    player.DestroyPlayer();
+        player.DestroyPlayer();
     }
 
     void gameLost(){

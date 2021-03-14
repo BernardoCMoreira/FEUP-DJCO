@@ -40,6 +40,9 @@ public class EnemyBullet : MonoBehaviour
             }
             Destroy(gameObject);
         }
+        else if(hitInfo.attachedRigidbody && hitInfo.attachedRigidbody.tag=="Explode"){
+            Destroy(gameObject);
+        }
     }
 
 

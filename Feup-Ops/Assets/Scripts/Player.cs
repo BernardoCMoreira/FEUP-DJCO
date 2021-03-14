@@ -111,6 +111,14 @@ public class Player : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+
+        fixHealthBar();
+    }
+
+    private void fixHealthBar(){
+        Vector3 theScale = gameObject.transform.GetChild(2).GetChild(0).localScale;
+        theScale.x *= -1;
+        gameObject.transform.GetChild(2).GetChild(0).gameObject.transform.localScale = theScale;
     }
 
     public void Die(){
