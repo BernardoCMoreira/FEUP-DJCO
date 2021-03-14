@@ -6,7 +6,7 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
 
-    public float health = 200;
+    public int health = 200;
     public GameObject target; //player
     public float MinDist;
 
@@ -16,6 +16,8 @@ public class Boss : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] enemyPrefabs;
 
+    public HealthBar healthBar;
+
     private Animator anim;
 
 
@@ -24,6 +26,7 @@ public class Boss : MonoBehaviour
     {
         timeBtwSpawn = startTimeSpawn;
         anim = GetComponent<Animator>();
+        healthBar.SetMaxHealth(health);
     }
 
     // Update is called once per frame
@@ -59,8 +62,10 @@ public class Boss : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage){
-        health -= damage; 
+    public void TakeDamage(int damage){
+        health -= damage;
+        healthBar.SetHealth(health);
+ 
     }
 
     
