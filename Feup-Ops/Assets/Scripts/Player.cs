@@ -184,12 +184,10 @@ public class Player : MonoBehaviour
     }
 
     public void enterSecretLevel(){
-        Debug.Log("ENTER Secret LEVEL! ................");
-        gameObject.transform.position = new Vector2(-17f,-22.5f);
+        gameObject.transform.position = new Vector2(-17f,-35f);
     }
 
     public void exitSecretLevel(){
-        Debug.Log("Exit Secret LEVEL!");
-        gameObject.transform.position = new Vector2(-17f,-6f);
+        gameObject.transform.position = new Vector2(22f,-7.7f);
     }
 }
