@@ -38,10 +38,9 @@ public class DoubleDoors : MonoBehaviour
         }
     }
 
-    void endGame(){
-        
+    public void endGame(){
         audioSource.Stop();
-
+        
         GameObject obj = GameObject.FindGameObjectWithTag("CanvasTime");
         obj.SetActive(false);
 

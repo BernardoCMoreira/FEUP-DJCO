@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
 
     /* Screens */
     public GameOverScreen gameOverScreen;
+    public DoubleDoors doubleDoor;
 
     /* Aux */
     public bool facingRight;
@@ -113,15 +114,8 @@ public class Player : MonoBehaviour
     }
 
     public void Die(){
-        string time = "00:00";
-        GameObject c = GameObject.FindGameObjectWithTag("Clock");
-            if(c!=null){
-                Debug.Log(GetComponent<Clock>());
-                time = c.GetComponent<Clock>().getCurrentTime();
-            }
-        gameOverScreen.Setup(score, time);
-        Destroy(gameObject);
-        Debug.Log("Player died");
+        doubleDoor.endGame();
+        DestroyPlayer();
     }
 
     public void DestroyPlayer(){

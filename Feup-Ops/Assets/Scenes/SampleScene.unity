@@ -18948,9 +18948,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6065175472152922185, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
+      propertyPath: jumpForce
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065175472152922185, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
       propertyPath: winScreen
       value: 
       objectReference: {fileID: 1848854831}
+    - target: {fileID: 6065175472152922185, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
+      propertyPath: doubleDoor
+      value: 
+      objectReference: {fileID: 20296954}
     - target: {fileID: 6065175472152922185, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: CameraShake
@@ -18959,7 +18969,7 @@ PrefabInstance:
     - target: {fileID: 6065175472152922185, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: playerSpeed
-      value: 4.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6065175472152922185, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
