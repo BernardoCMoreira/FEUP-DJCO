@@ -19,8 +19,10 @@ public class Player : MonoBehaviour
     private bool space;
     private float speed; 
 
-    /* Aux */
+    /* Screens */
     public GameOverScreen gameOverScreen;
+
+    /* Aux */
     public bool facingRight;
     public int MAX_HIGH = 5;
     public int health = 100;
