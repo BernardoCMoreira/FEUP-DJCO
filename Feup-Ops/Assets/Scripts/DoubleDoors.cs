@@ -54,6 +54,7 @@ public class DoubleDoors : MonoBehaviour
          else if (Player.score == 10 && Player.scroll == 1){
             gameWonMIT();
         }
+    player.DestroyPlayer();
     }
 
     void gameLost(){

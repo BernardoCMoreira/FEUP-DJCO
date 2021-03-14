@@ -124,6 +124,10 @@ public class Player : MonoBehaviour
         Debug.Log("Player died");
     }
 
+    public void DestroyPlayer(){
+        Destroy(gameObject);
+    }
+
     public void TakeDamage(int damage){
         //SoundManager.playSound("playerHit", 0.5f);
         StartCoroutine(CameraShake.Shake(.15f));  
