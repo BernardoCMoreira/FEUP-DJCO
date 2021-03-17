@@ -5,12 +5,10 @@ using UnityEngine.UI;
 
 public class Clock : MonoBehaviour
 {
-
     [SerializeField] Text timeCounter;
     [SerializeField] Text scoreBoard;
     [SerializeField] Text scoreBoardScroll;
 
-    private float day;
     float currentTime = 0f;
     float startingTime = 0f;
     float minutes = 0f;

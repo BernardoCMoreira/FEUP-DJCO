@@ -6,22 +6,21 @@ using UnityEngine;
 public class Boss : MonoBehaviour
 {
 
-    public int health = 200;
-    public GameObject target; //player
-    public float MinDist;
+    [SerializeField] int health = 200;
+    [SerializeField] GameObject target; //player
+    [SerializeField] float MinDist;
 
-    private float timeBtwSpawn;
-    public float startTimeSpawn = 4f;
+    float timeBtwSpawn;
+    [SerializeField] float startTimeSpawn = 4f;
 
-    public Transform[] spawnPoints;
-    public GameObject[] enemyPrefabs;
+    [SerializeField] Transform[] spawnPoints;
+    [SerializeField] GameObject[] enemyPrefabs;
 
-    public HealthBar healthBar;
+    [SerializeField] HealthBar healthBar;
 
-    private Animator anim;
+    Animator anim;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         timeBtwSpawn = startTimeSpawn;
@@ -29,11 +28,9 @@ public class Boss : MonoBehaviour
         healthBar.SetMaxHealth(health);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(health <= 0 ){
-            //anim.SetBool("isDying", true);
             Die();
         }
 
@@ -65,7 +62,6 @@ public class Boss : MonoBehaviour
     public void TakeDamage(int damage){
         health -= damage;
         healthBar.SetHealth(health);
- 
     }
 
     

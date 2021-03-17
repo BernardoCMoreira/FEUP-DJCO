@@ -3,20 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Elevator : MonoBehaviour {
+	bool moveUp;
+	float initialPos;
 	
-
-	float dirY, moveSpeed = 2f;
-	bool moveUp = true;
-
-	private float initialPos;
-
-	
-	/* Public vars */
-	public float distance;
+	[SerializeField] float distance;
+ 	[SerializeField] float moveSpeed;
 
 	void Start(){
 		initialPos = transform.position.y;
-	}
+		moveUp = true;
+		moveSpeed = 2f;
+	}	
 
 	// Update is called once per frame
 	void Update () {

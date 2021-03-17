@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class Door : MonoBehaviour
 {
     [SerializeField] Text Message;
-    public Player player;
-    public Boss boss;
-    private bool collision;
+    [SerializeField] Player player;
+    [SerializeField] Boss boss;
+    bool collision;
 
     void Start(){
-        Debug.Log("STARTED");
         collision = false;
     }
+
     void OnTriggerStay2D(Collider2D col){
         collision = true;
         if (col.CompareTag("Player") && boss){
@@ -32,16 +32,23 @@ public class Door : MonoBehaviour
     }
 
     void Update(){
-        if(boss) return; //boss ta vivo, nao faz nada
+        if(boss) return;
 
         if(collision){
-
-            if(Input.GetKeyDown(KeyCode.O) && player.transform.position.y < -10f){
-                player.exitSecretLevel();
+            if(gameObject.name == "Door"){
+                if(Input.GetKeyDown(KeyCode.O) && player.transform.position.y < -10f){
+                    player.exitSecretLevel();
+                }
+                else if(Input.GetKeyDown(KeyCode.O) && player.transform.position.y >= -10f){
+                    player.enterSecretLevel();
+                }
             }
-
-            else if(Input.GetKeyDown(KeyCode.O) && player.transform.position.y >= -10f){
-                player.enterSecretLevel();
+            else if(gameObject.name == "LeaveDoor"){
+                if(Input.GetKeyDown(KeyCode.O)){
+                    GameController gameController = player.GetComponent<GameController>();
+                    if(gameController)
+                        gameController.endGame();
+                }
             }
         }
     }

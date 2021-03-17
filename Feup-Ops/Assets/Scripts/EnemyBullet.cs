@@ -4,44 +4,46 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {   
-    private Rigidbody2D rb;
-    private Transform target;
+    Rigidbody2D rb;
+    Transform target;
 
     /* Public vars */
-    public float speed = 5f;
-    public int damage = 40;
-
+    [SerializeField] float speed;
+    [SerializeField] int damage;
 
     void Start()
-    {       
-            rb = gameObject.GetComponent<Rigidbody2D>();
-            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    {   
+        speed = 5f;
+        damage = 40;    
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
-            if(rb.transform.position.x <= target.position.x){
-                rb.velocity = transform.right * speed;
-            } else {
-                rb.velocity = -transform.right * speed;
-            }
+        if(rb.transform.position.x <= target.position.x){
+            rb.velocity = transform.right * speed;
+        } else {
+            rb.velocity = -transform.right * speed;
+        }
 
-            Destroy(gameObject, 4);
+        Destroy(gameObject, 4);
     }
 
 
     void OnTriggerEnter2D(Collider2D hitInfo){
-        if(hitInfo.attachedRigidbody && ((hitInfo.attachedRigidbody.name) == "DiscoEnemy") 
-            ||  hitInfo.attachedRigidbody && ((hitInfo.attachedRigidbody.name) == "BeerEnemy") ){
-            return;
-        }           
-       
-        if(hitInfo.attachedRigidbody && (hitInfo.attachedRigidbody.name == "Player")){
-            Player pb = hitInfo.GetComponent<Player>();
-            if(pb!= null){
-                pb.TakeDamage(damage);
+        if(hitInfo.attachedRigidbody){
+            if(hitInfo.attachedRigidbody.tag == "DiscoEnemy" || hitInfo.attachedRigidbody.tag == "BeerEnemy" ){
+                return;
+            }           
+        
+            if(hitInfo.attachedRigidbody.tag == "Player"){
+                Player pb = hitInfo.GetComponent<Player>();
+                if(pb!= null){
+                    pb.TakeDamage(damage);
+                }
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
-        }
-        else if(hitInfo.attachedRigidbody && hitInfo.attachedRigidbody.tag=="Explode"){
-            Destroy(gameObject);
+            else if(hitInfo.attachedRigidbody.tag=="Explode"){
+                Destroy(gameObject);
+            }
         }
     }
 

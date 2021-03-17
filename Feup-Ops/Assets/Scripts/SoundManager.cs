@@ -25,8 +25,7 @@ public class SoundManager : MonoBehaviour
         collectableSound = Resources.Load<AudioClip>("Sound/collectableSound");
         audioSrc = GetComponent<AudioSource>();
     }
-    void Update()
-    {}
+
 
     public static void playSound(string clip, float volume){  
 

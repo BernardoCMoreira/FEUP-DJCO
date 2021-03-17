@@ -17,7 +17,7 @@ public class CameraShake : MonoBehaviour
 
             elapsed += Time.deltaTime;
 
-            yield return null;
+            yield return null; /* yield for coroutine */
         }
 
         transform.localPosition = originalPos;

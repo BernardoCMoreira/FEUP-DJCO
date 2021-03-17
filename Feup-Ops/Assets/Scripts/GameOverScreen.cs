@@ -5,9 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {   
-
-    public Text pointsText;
-    public Text timeText;
+    [SerializeField] Text pointsText;
+    [SerializeField] Text timeText;
 
     public void Setup(int score, string time){
         gameObject.SetActive(true);

@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {   
-    private Animator anim;
+    Animator anim;
+    Transform target;
+    float timeBtwShots;
+    bool facingRight;
 
-    private Transform target;
-
-    private float timeBtwShots;
-
-
-    /* Public vars */
-    public float speed = 0.25f;
-    public int health = 100;
-    public int MinDist;
-    public GameObject projectile;
-    public float startTimeBtwShots = 1f;
-    public HealthBar healthBar;
+    [SerializeField] float speed;
+    [SerializeField] int health;
+    [SerializeField] int MinDist;
+    [SerializeField] GameObject projectile;
+    [SerializeField] float startTimeBtwShots;
+    [SerializeField] HealthBar healthBar;
     
-    private bool facingRight;
-
     void Start()
     {   
+        speed = 0.25f;
+        health = 100;
+        startTimeBtwShots = 1f;
         facingRight = true;
         timeBtwShots = startTimeBtwShots;
         anim = GetComponent<Animator>();

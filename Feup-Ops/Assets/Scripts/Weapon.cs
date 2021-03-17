@@ -4,61 +4,60 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public GameObject bullet1;
-    public GameObject bullet2;
-    public Transform firePoint;
-    public float bulletSpeed = 10f;
-    public GameObject target;
-
-
-    public float fireRate = 0.5F;
-    private float nextFire = 0.0F;
-
-
+    [SerializeField] GameObject bullet1;
+    [SerializeField] GameObject bullet2;
+    [SerializeField] Transform firePoint;
+    [SerializeField] float bulletSpeed;
+    [SerializeField] GameObject target;
+    [SerializeField] float fireRate;
+    
+    float nextFire;
     Vector2 lookDirection;
     float lookAngle;
-
-    private Player player;
+    Player player;
     
     void Start(){
+        bulletSpeed = 10f;
+        fireRate = 0.5f;
+        nextFire = 0.0f;
         player = (Player) target.GetComponent(typeof(Player));
-
     }
 
     void Update()
     {   
         lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(target.transform.position.x, target.transform.position.y);
-        
         lookAngle = Mathf.Atan2(lookDirection.y, lookDirection.x)  * Mathf.Rad2Deg;
-
         firePoint.rotation = Quaternion.Euler(0, 0, lookAngle);
-       
 
-        if (Input.GetMouseButtonDown(0) && (Time.time > nextFire))
-        {
-            SoundManager.playSound("playerShoot", 0.6f);
-
-            player.shoot(lookDirection.x, lookDirection.y);
-
-            GameObject bulletClone = Instantiate(bullet1);
-            bulletClone.transform.position = firePoint.position;
-            bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
-
-            bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
-            nextFire = Time.time + fireRate;
+        if( Time.time > nextFire) {
+            if (Input.GetMouseButtonDown(0))
+            {
+                instatiateBullet(1);
+                nextFire = Time.time + fireRate;
+            }
+            else if (Input.GetMouseButtonDown(1)){
+                instatiateBullet(2);
+                nextFire = Time.time + fireRate;
+            }
         }
-        if (Input.GetMouseButtonDown(1) && (Time.time > nextFire)){
-            SoundManager.playSound("playerShoot", 0.6f);
+    }
 
-            player.shoot(lookDirection.x, lookDirection.y);
+    void instatiateBullet(int type){
+        SoundManager.playSound("playerShoot", 0.6f);
 
-            GameObject bulletClone = Instantiate(bullet2);
-            bulletClone.transform.position = firePoint.position;
-            bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
+        player.shoot(lookDirection.x, lookDirection.y);
 
-            bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
-            nextFire = Time.time + fireRate;
-        }
+        GameObject bulletClone;
+
+        if(type == 1) 
+            bulletClone = Instantiate(bullet1);
+        else
+            bulletClone = Instantiate(bullet2);
+
+        bulletClone.transform.position = firePoint.position;
+        bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
+
+        bulletClone.GetComponent<Rigidbody2D>().velocity = firePoint.right * bulletSpeed;
     }
 
 }

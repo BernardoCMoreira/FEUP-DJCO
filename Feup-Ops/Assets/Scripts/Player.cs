@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
 
     /* Screens */
     public GameOverScreen gameOverScreen;
-    public DoubleDoors doubleDoor;
 
     /* Aux */
     public bool facingRight;
@@ -122,8 +121,11 @@ public class Player : MonoBehaviour
     }
 
     public void Die(){
-        doubleDoor.endGame();
-        DestroyPlayer();
+        GameController gameController = GetComponent<GameController>();
+
+        if(gameController){
+            gameController.endGame();
+        }
     }
 
     public void DestroyPlayer(){
@@ -197,5 +199,13 @@ public class Player : MonoBehaviour
 
     public void exitSecretLevel(){
         gameObject.transform.position = new Vector2(22f,-7.7f);
+    }
+
+    public int getScore(){
+        return score;
+    }
+
+    public bool hasScroll(){
+        return scroll==1;
     }
 }
