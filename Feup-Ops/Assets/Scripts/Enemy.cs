@@ -9,18 +9,15 @@ public class Enemy : MonoBehaviour
     float timeBtwShots;
     bool facingRight;
 
-    [SerializeField] float speed;
-    [SerializeField] int health;
-    [SerializeField] int MinDist;
+    [SerializeField] float speed = 0.25f;
+    [SerializeField] int health = 100;
+    [SerializeField] int MinDist = 8;
     [SerializeField] GameObject projectile;
-    [SerializeField] float startTimeBtwShots;
+    [SerializeField] float startTimeBtwShots = 1f;
     [SerializeField] HealthBar healthBar;
     
     void Start()
     {   
-        speed = 0.25f;
-        health = 100;
-        startTimeBtwShots = 1f;
         facingRight = true;
         timeBtwShots = startTimeBtwShots;
         anim = GetComponent<Animator>();

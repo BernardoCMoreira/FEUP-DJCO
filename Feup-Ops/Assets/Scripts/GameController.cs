@@ -15,8 +15,7 @@ public class GameController : MonoBehaviour
     public void endGame(){       
         audioSource.Stop();
         
-        GameObject obj = GameObject.FindGameObjectWithTag("CanvasTime");
-        obj.SetActive(false);
+        removeComponents();
 
         if(player.getScore() < 10){
             DisplayMenu(1); //Lost
@@ -31,7 +30,14 @@ public class GameController : MonoBehaviour
         player.DestroyPlayer();
     }
 
+    private void removeComponents(){
+        if(GameObject.FindGameObjectWithTag("CanvasTime")) GameObject.FindGameObjectWithTag("CanvasTime").SetActive(false);
+        if(GameObject.Find("BookBar")) GameObject.Find("BookBar").SetActive(false);
+        if(GameObject.Find("ImageScroll")) GameObject.Find("ImageScroll").SetActive(false);
+        if(GameObject.Find("ImageScroll_Inactive")) GameObject.Find("ImageScroll_Inactive").SetActive(false);
+    }
 
+    
     public void DisplayMenu(int screenType){
         string time = "00:00";
         GameObject c = GameObject.FindGameObjectWithTag("Clock");

@@ -1,33 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
-{   
-
-    public CameraShake CameraShake;
-
-
-    [SerializeField] public Transform feet;
-    public LayerMask ground;
-
-    /* Player structure */
-    private Rigidbody2D rb;
-    private Animator anim;
-
-    /* Player physics */    
-    private bool space;
+{    
+    Rigidbody2D rb;
+    Animator anim;
+    bool space;
     private float speed; 
 
-    /* Screens */
-    public GameOverScreen gameOverScreen;
-
-    /* Aux */
-    public bool facingRight;
-    public int MAX_HIGH = 5;
-    public int health = 100;
-    public float jumpForce = 5;
-    public float playerSpeed = 3;
+    [SerializeField] CameraShake CameraShake;
+    [SerializeField] LayerMask ground;
+    [SerializeField] bool facingRight;
+    [SerializeField] int health = 100;
+    [SerializeField] float jumpForce = 5;
+    [SerializeField] float playerSpeed = 3;
+    [SerializeField] HealthBar healthBar;
+    [SerializeField] BookBar bookBar;
 
     /* Global vars*/
     public static bool isFrozen;
@@ -35,8 +25,7 @@ public class Player : MonoBehaviour
     public static int score;
     public static int scroll;
 
-    /*Life bar*/
-    public HealthBar healthBar;
+    public Transform feet;
 
     void Start()
     {   
@@ -58,7 +47,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         if(health <= 0 ) {
-            //TODO: arranjar anim;
             Die();
         }
 
@@ -76,9 +64,7 @@ public class Player : MonoBehaviour
         speed = Input.GetAxis("Horizontal");
     }
 
-    void FixedUpdate(){
-        updateLevel();
-        
+    void FixedUpdate(){        
         if(space){
             SoundManager.playSound("playerJump", 0.4f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
@@ -129,7 +115,7 @@ public class Player : MonoBehaviour
     }
 
     public void DestroyPlayer(){
-        Destroy(gameObject);
+        Destroy(gameObject, 0.5f);
     }
 
     public void TakeDamage(int damage){
@@ -140,22 +126,19 @@ public class Player : MonoBehaviour
     }
 
    void OnCollisionEnter2D(Collision2D col)
-    {           
+    {
         if(col.gameObject.tag == "Book"){ 
-            SoundManager.playSound("collectable", 0.6f);
-            Destroy(col.gameObject);
+            collect(col);
             score += 1;
+            bookBar.SetScore(score);
         }
-
         if(col.gameObject.tag == "Scroll"){ 
-            SoundManager.playSound("collectable", 0.6f);
-            Destroy(col.gameObject);
+            collect(col);
             scroll += 1;
+            GameObject.Find("ImageScroll_Inactive").SetActive(false);
         }
-        
-        if(col.gameObject.tag == "Frozen"){ 
-            SoundManager.playSound("collectable", 0.6f);
-            Destroy(col.gameObject);
+        if(col.gameObject.tag == "Frozen"){
+            collect(col);
             isFrozen = true;
             GameObject c = GameObject.FindGameObjectWithTag("Clock");
             if(c!=null){
@@ -163,25 +146,17 @@ public class Player : MonoBehaviour
                 c.GetComponent<Clock>().StartFreezeCount(5);
             }
         }
-        if(col.gameObject.tag == "Heart"){ 
-            SoundManager.playSound("collectable", 0.6f);
-            Destroy(col.gameObject);
+        if(col.gameObject.tag == "Heart"){
+            collect(col);
             health += 20;
             healthBar.SetHealth(health);
         }
     }
 
-
-    private void updateLevel(){
-        if(gameObject.transform.position.x > -15f && gameObject.transform.position.x < 16f &&
-            gameObject.transform.position.y > - 10f && gameObject.transform.position.y < 10f ) {
-            level = 1;
-        } else if (gameObject.transform.position.x >= 16f && gameObject.transform.position.x < 32f &&
-            gameObject.transform.position.y > - 10f && gameObject.transform.position.y < 10f ) {
-                level = 2;
-            }
+    private void collect(Collision2D col){
+        SoundManager.playSound("collectable", 0.6f);
+        Destroy(col.gameObject);
     }
-
 
     public void shoot(float xCoord, float yCoord){
         if(facingRight && xCoord < 0){

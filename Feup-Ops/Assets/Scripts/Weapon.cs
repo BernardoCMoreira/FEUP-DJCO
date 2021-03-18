@@ -7,9 +7,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject bullet1;
     [SerializeField] GameObject bullet2;
     [SerializeField] Transform firePoint;
-    [SerializeField] float bulletSpeed;
+    [SerializeField] float bulletSpeed = 10f;
     [SerializeField] GameObject target;
-    [SerializeField] float fireRate;
+    [SerializeField] float fireRate = 0.75f;
     
     float nextFire;
     Vector2 lookDirection;
@@ -17,8 +17,6 @@ public class Weapon : MonoBehaviour
     Player player;
     
     void Start(){
-        bulletSpeed = 10f;
-        fireRate = 0.5f;
         nextFire = 0.0f;
         player = (Player) target.GetComponent(typeof(Player));
     }

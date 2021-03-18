@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 5); 
+        Destroy(gameObject, 5); //TODO: mudar para serialize
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo){       

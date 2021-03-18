@@ -6,13 +6,12 @@ public class Elevator : MonoBehaviour {
 	bool moveUp;
 	float initialPos;
 	
-	[SerializeField] float distance;
- 	[SerializeField] float moveSpeed;
+	[SerializeField] float distance = 4f;
+ 	[SerializeField] float moveSpeed = 2f;
 
 	void Start(){
 		initialPos = transform.position.y;
 		moveUp = true;
-		moveSpeed = 2f;
 	}	
 
 	// Update is called once per frame

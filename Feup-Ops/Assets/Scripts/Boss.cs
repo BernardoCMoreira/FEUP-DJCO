@@ -8,7 +8,7 @@ public class Boss : MonoBehaviour
 
     [SerializeField] int health = 200;
     [SerializeField] GameObject target; //player
-    [SerializeField] float MinDist;
+    [SerializeField] float MinDist = 15f;
 
     float timeBtwSpawn;
     [SerializeField] float startTimeSpawn = 4f;

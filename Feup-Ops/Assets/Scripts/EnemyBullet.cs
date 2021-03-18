@@ -8,13 +8,11 @@ public class EnemyBullet : MonoBehaviour
     Transform target;
 
     /* Public vars */
-    [SerializeField] float speed;
-    [SerializeField] int damage;
+    [SerializeField] float speed = 5f;
+    [SerializeField] int damage = 40;
 
     void Start()
     {   
-        speed = 5f;
-        damage = 40;    
         rb = gameObject.GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
@@ -33,7 +31,6 @@ public class EnemyBullet : MonoBehaviour
             if(hitInfo.attachedRigidbody.tag == "DiscoEnemy" || hitInfo.attachedRigidbody.tag == "BeerEnemy" ){
                 return;
             }           
-        
             if(hitInfo.attachedRigidbody.tag == "Player"){
                 Player pb = hitInfo.GetComponent<Player>();
                 if(pb!= null){
