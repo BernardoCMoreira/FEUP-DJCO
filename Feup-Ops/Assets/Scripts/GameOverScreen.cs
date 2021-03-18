@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {   
     [SerializeField] Text pointsText;
+    [SerializeField] Text scrollText;
     [SerializeField] Text timeText;
 
-    public void Setup(int score, string time){
+    public void Setup(int score, string time, string scroll){
         gameObject.SetActive(true);
         pointsText.text="SCORE : " + score.ToString();
         timeText.text = "TIME : " + time;
+        scrollText.text = "SCROLL : " + scroll;
     }
 
     public void ExitGame(){

@@ -44,16 +44,21 @@ public class GameController : MonoBehaviour
         if(c!=null){
             time = c.GetComponent<Clock>().getCurrentTime();
         }
+        string scroll="";
+        if(player.hasScroll()) 
+            scroll+="YES";
+        else 
+            scroll += "NO";
 
         switch(screenType){
             case 1:
-                gameOverScreen.Setup(player.getScore(), time);
+                gameOverScreen.Setup(player.getScore(), time, scroll);
             break;
             case 2:
-                winScreen.Setup(player.getScore(), time);
+                winScreen.Setup(player.getScore(), time, scroll);
             break;
             case 3:
-                winScreenMIT.Setup(player.getScore(), time);
+                winScreenMIT.Setup(player.getScore(), time, scroll);
             break;
         }
     }
