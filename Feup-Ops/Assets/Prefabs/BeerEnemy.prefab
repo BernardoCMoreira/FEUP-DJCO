@@ -306,6 +306,7 @@ MonoBehaviour:
     type: 3}
   startTimeBtwShots: 2.5
   healthBar: {fileID: 4211816755541285597}
+  FlameAnim: {fileID: 3913997588899129710}
 --- !u!1001 &3913997587516184307
 PrefabInstance:
   m_ObjectHideFlags: 0

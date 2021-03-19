@@ -142,7 +142,6 @@ public class Player : MonoBehaviour
             isFrozen = true;
             GameObject c = GameObject.FindGameObjectWithTag("Clock");
             if(c!=null){
-                Debug.Log(GetComponent<Clock>());
                 c.GetComponent<Clock>().StartFreezeCount(5);
             }
         }

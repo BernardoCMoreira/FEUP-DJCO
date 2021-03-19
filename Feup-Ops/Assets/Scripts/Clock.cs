@@ -13,6 +13,7 @@ public class Clock : MonoBehaviour
     float freezeEndTime = 0f;
     float freezeDuration = 0f;
 
+
     // Start is called before the first frame update
     void Start()
     {

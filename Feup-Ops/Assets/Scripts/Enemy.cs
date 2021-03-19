@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float startTimeBtwShots = 1f;
     [SerializeField] HealthBar healthBar;
     
+    [SerializeField] Animator FlameAnim;
+    
     void Start()
     {   
         facingRight = true;
@@ -31,8 +33,16 @@ public class Enemy : MonoBehaviour
             Die();
         }
         
+
         if(Player.isFrozen || !target){
+            if(!FlameAnim.GetCurrentAnimatorStateInfo(0).IsName("BlueFlame")){
+                FlameAnim.SetBool("isFreeze", true);
+            }
             return;
+        }
+
+        if(!Player.isFrozen && FlameAnim.GetCurrentAnimatorStateInfo(0).IsName("BlueFlame")){
+            FlameAnim.SetBool("isFreeze", false);
         }
 
         if(transform.position.x < target.position.x && !facingRight)
