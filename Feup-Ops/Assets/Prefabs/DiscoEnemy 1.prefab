@@ -278,7 +278,7 @@ MonoBehaviour:
   MinDist: 10
   projectile: {fileID: 4609443898904036105, guid: eee4bdafbe8986e49a2afc67bd8796d8,
     type: 3}
-  startTimeBtwShots: 2.5
+  startTimeBtwShots: 1
   healthBar: {fileID: 7930323903548725365}
   FlameAnim: {fileID: 6039210427786824620}
 --- !u!61 &5197918573838918594

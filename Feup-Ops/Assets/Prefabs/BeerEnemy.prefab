@@ -301,10 +301,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   health: 100
-  MinDist: 10
+  MinDist: 15
   projectile: {fileID: 804140205228949417, guid: 497af4ca8e0754d47be5d4c9c660509c,
     type: 3}
-  startTimeBtwShots: 2.5
+  startTimeBtwShots: 1.5
   healthBar: {fileID: 4211816755541285597}
   FlameAnim: {fileID: 3913997588899129710}
 --- !u!1001 &3913997587516184307

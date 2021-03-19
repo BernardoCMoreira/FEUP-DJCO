@@ -103,7 +103,7 @@ MonoBehaviour:
   health: 200
   target: {fileID: 0}
   MinDist: 15
-  startTimeSpawn: 4
+  startTimeSpawn: 2.5
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
