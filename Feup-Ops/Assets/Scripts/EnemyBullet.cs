@@ -11,6 +11,7 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField] float speed = 5f;
     [SerializeField] int damage = 40;
     [SerializeField] int bulletDurationTime = 5;
+    [SerializeField] GameObject bulletAnim;
 
     private Vector3 direction;
 
@@ -25,6 +26,7 @@ public class EnemyBullet : MonoBehaviour
 
     void Update(){
          transform.position += direction * speed * Time.deltaTime;
+         
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo){
@@ -40,6 +42,8 @@ public class EnemyBullet : MonoBehaviour
                 Destroy(gameObject);
             }
             else if(hitInfo.attachedRigidbody.tag=="Explode"){
+                GameObject x = Instantiate(bulletAnim, transform.position, transform.rotation);
+                Destroy(x, 0.6f);
                 Destroy(gameObject);
             }
         }

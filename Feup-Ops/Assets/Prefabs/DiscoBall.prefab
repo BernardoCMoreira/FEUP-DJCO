@@ -155,4 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  player: {fileID: 3474428650233318278, guid: 11867d1b67a2db240a7ed1af69e3b6a4, type: 3}
+  damage: 40
+  bulletDurationTime: 5
+  bulletAnim: {fileID: 3061376520588359431, guid: 87be9162735826040bfb51f608cf8995,
+    type: 3}
