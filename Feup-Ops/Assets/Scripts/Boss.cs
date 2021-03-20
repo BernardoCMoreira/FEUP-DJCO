@@ -11,7 +11,7 @@ public class Boss : MonoBehaviour
     [SerializeField] float MinDist = 15f;
 
     float timeBtwSpawn;
-    [SerializeField] float startTimeSpawn = 4f;
+    [SerializeField] float spawnRate = 4f;
 
     [SerializeField] Transform[] spawnPoints;
     [SerializeField] GameObject[] enemyPrefabs;
@@ -19,11 +19,12 @@ public class Boss : MonoBehaviour
     [SerializeField] HealthBar healthBar;
 
     Animator anim;
+    float nextSpawn;
 
 
     void Start()
-    {
-        timeBtwSpawn = startTimeSpawn;
+    {   
+        nextSpawn = 0.0f;
         anim = GetComponent<Animator>();
         healthBar.SetMaxHealth(health);
     }
@@ -34,7 +35,7 @@ public class Boss : MonoBehaviour
             Die();
         }
 
-        if(Player.isFrozen || !target){
+        if(!target){
             return;
         }
 
@@ -46,17 +47,19 @@ public class Boss : MonoBehaviour
     void generateEnemies(){
         int randEnemy = Random.Range(0, enemyPrefabs.Length);
         int randSpawnPoint = Random.Range(0, spawnPoints.Length);
+        
 
-
-        if (timeBtwSpawn <=0){
+        if (Time.time > nextSpawn){
             SoundManager.playSound("bossAtack", 0.65f);
             anim.SetTrigger("isAttacking");
-            Instantiate(enemyPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
-            timeBtwSpawn = startTimeSpawn;
+            float x = spawnPoints[randSpawnPoint].position.x;
+            float y = spawnPoints[randSpawnPoint].position.y;
+            Instantiate(enemyPrefabs[randEnemy], new Vector3(x,y,0), transform.rotation);
             anim.SetBool("isQuiet", true);
-        } else{
-            timeBtwSpawn -=Time.deltaTime;
+            nextSpawn = Time.time + spawnRate; 
         }
+
+     
     }
 
     public void TakeDamage(int damage){

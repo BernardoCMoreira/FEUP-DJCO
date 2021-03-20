@@ -6,14 +6,14 @@ public class Enemy : MonoBehaviour
 {   
     Animator anim;
     Transform target;
-    float timeBtwShots;
+    float nextFire;
     bool facingRight;
 
     [SerializeField] float speed = 0.25f;
     [SerializeField] int health = 100;
     [SerializeField] int MinDist = 8;
     [SerializeField] GameObject projectile;
-    [SerializeField] float startTimeBtwShots = 1f;
+    [SerializeField] float fireRate = 1f;
     [SerializeField] HealthBar healthBar;
     
     [SerializeField] Animator FlameAnim;
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {   
         facingRight = true;
-        timeBtwShots = startTimeBtwShots;
+        nextFire = 0.0f;
         anim = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         healthBar.SetMaxHealth(health);
@@ -84,13 +84,10 @@ public class Enemy : MonoBehaviour
 
     void attackPlayer(){
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed*Time.deltaTime);
-
-        if (timeBtwShots <=0){
+        if (Time.time > nextFire){
             Instantiate(projectile, transform.position, Quaternion.identity);
-            timeBtwShots = startTimeBtwShots;
-        } else{
-            timeBtwShots -=Time.deltaTime;
-        }   
+            nextFire = Time.time + fireRate; 
+        }
     }
 
     void Flip ()

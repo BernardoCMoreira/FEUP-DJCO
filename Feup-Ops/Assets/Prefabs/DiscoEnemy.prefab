@@ -148,8 +148,8 @@ GameObject:
   - component: {fileID: 3913997589376362245}
   - component: {fileID: 3913997589376362244}
   m_Layer: 0
-  m_Name: BeerEnemy
-  m_TagString: BeerEnemy
+  m_Name: DiscoEnemy
+  m_TagString: DiscoEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,10 +209,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 2783388703030345983, guid: a8d1a3f2bfd5b984ba08486a0cfce282,
+  m_Sprite: {fileID: -8907956847809389356, guid: b998c68d0c4f43343963cb03ca90ef7c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.64, y: 0.64}
@@ -231,7 +231,7 @@ Animator:
   m_GameObject: {fileID: 3913997589376362247}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3c4cfa62d5ed83a4c9c82318950ea07d, type: 2}
+  m_Controller: {fileID: 9100000, guid: b96345a4693f71c4ca55e4e68807f07e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -278,7 +278,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.22, y: 0.5}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -301,8 +301,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   health: 100
-  MinDist: 15
-  projectile: {fileID: 804140205228949417, guid: 497af4ca8e0754d47be5d4c9c660509c,
+  MinDist: 10
+  projectile: {fileID: 4609443898904036105, guid: eee4bdafbe8986e49a2afc67bd8796d8,
     type: 3}
   fireRate: 2.5
   healthBar: {fileID: 4211816755541285597}

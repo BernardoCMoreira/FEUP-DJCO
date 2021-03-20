@@ -10,21 +10,22 @@ public class EnemyBullet : MonoBehaviour
     /* Public vars */
     [SerializeField] float speed = 5f;
     [SerializeField] int damage = 40;
+    [SerializeField] int bulletDurationTime = 5;
+
+    private Vector3 direction;
 
     void Start()
     {   
         rb = gameObject.GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        direction = (target.position - transform.position).normalized ;
 
-        if(rb.transform.position.x <= target.position.x){
-            rb.velocity = transform.right * speed;
-        } else {
-            rb.velocity = -transform.right * speed;
-        }
-
-        Destroy(gameObject, 4);
+        Destroy(gameObject, bulletDurationTime);
     }
 
+    void Update(){
+         transform.position += direction * speed * Time.deltaTime;
+    }
 
     void OnTriggerEnter2D(Collider2D hitInfo){
         if(hitInfo.attachedRigidbody){
