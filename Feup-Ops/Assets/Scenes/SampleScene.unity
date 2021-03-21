@@ -281,7 +281,7 @@ SpriteRenderer:
   m_Size: {x: 2.54, y: 2.5810137}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &17299435 stripped
@@ -2673,7 +2673,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 52633201299171d4990bacf1afbf5e85, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4195e1b34a4ff634fad284ccf77f8436, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3593,7 +3593,7 @@ SpriteRenderer:
   m_Size: {x: 2.54, y: 2.5810137}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &354160893 stripped
@@ -21346,12 +21346,12 @@ PrefabInstance:
     - target: {fileID: 6065175472498587081, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.78
+      value: -18.5
       objectReference: {fileID: 0}
     - target: {fileID: 6065175472498587081, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.78
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 6065175472498587081, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}

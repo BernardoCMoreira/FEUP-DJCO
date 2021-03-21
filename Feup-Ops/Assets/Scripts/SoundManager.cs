@@ -23,15 +23,15 @@ public class SoundManager : MonoBehaviour
     {
         /*player related*/
         //playerHitSound = Resources.Load<AudioClip>("Sound/playerHit"); --------
-        playerShootSound = Resources.Load<AudioClip>("Sound/playerShoot");
-        playerJumpSound = Resources.Load<AudioClip>("Sound/playerJump");
+        playerShootSound = Resources.Load<AudioClip>("Zero Rare Retro Sound Effects/playerShoot");
+        playerJumpSound = Resources.Load<AudioClip>("Zero Rare Retro Sound Effects/playerJump");
 
         /* enemy related */
-        enemyDeathSound = Resources.Load<AudioClip>("Sound/enemyDeath");
-        bossAttackSound = Resources.Load<AudioClip>("Sound/enemyNear");
+        enemyDeathSound = Resources.Load<AudioClip>("Zero Rare Retro Sound Effects/enemyDeath");
+        bossAttackSound = Resources.Load<AudioClip>("Zero Rare Retro Sound Effects/enemyNear");
 
         /* collectables related */
-        collectableSound = Resources.Load<AudioClip>("Sound/collectableSound");
+        collectableSound = Resources.Load<AudioClip>("Zero Rare Retro Sound Effects/collectableSound");
         audioSrcActions = GetComponent<AudioSource>();
     }
 
