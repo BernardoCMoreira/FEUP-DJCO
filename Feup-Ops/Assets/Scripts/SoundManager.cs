@@ -22,7 +22,7 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         /*player related*/
-        //playerHitSound = Resources.Load<AudioClip>("Sound/playerHit"); --------
+        playerHitSound = Resources.Load<AudioClip>("Zero Rare Retro Sound Effects/playerHit");
         playerShootSound = Resources.Load<AudioClip>("Zero Rare Retro Sound Effects/playerShoot");
         playerJumpSound = Resources.Load<AudioClip>("Zero Rare Retro Sound Effects/playerJump");
 

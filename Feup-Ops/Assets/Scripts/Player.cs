@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(int damage){
-        //SoundManager.playSound("playerHit", 0.5f);
+        SoundManager.playSound("playerHit", 0.5f);
         StartCoroutine(CameraShake.Shake(.15f));  
         health -= damage; 
         healthBar.SetHealth(health);
