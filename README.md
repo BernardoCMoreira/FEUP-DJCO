@@ -55,8 +55,10 @@ Feup Ops is a game that represents a freshman from Feup who will have to make th
     * Google Images (Player, bullets)
     * [Odd Potato Gift](https://oddpotatogift.itch.io/16x16-fantasy-pack)
 
-
 <hr>
-### Credits
+
+## Credits
+
 **Bernardo Moreira** - 201604014 (50%)
+
 **Cláudia Mamede** - 201604832 (50%)
