@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         facingRight = true;
         isFrozen = false;
         healthBar.SetMaxHealth(health);
-        level = 1;
+        level = 1;    
     }
 
     bool touchGround(){
