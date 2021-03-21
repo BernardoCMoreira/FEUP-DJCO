@@ -9609,7 +9609,7 @@ GameObject:
   - component: {fileID: 965015045}
   - component: {fileID: 965015044}
   m_Layer: 5
-  m_Name: Scroll
+  m_Name: ScrollText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10116,7 +10116,7 @@ GameObject:
   - component: {fileID: 1012812816}
   - component: {fileID: 1012812815}
   m_Layer: 5
-  m_Name: Scroll
+  m_Name: ScrollText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17729,7 +17729,7 @@ GameObject:
   - component: {fileID: 1796955810}
   - component: {fileID: 1796955809}
   m_Layer: 5
-  m_Name: Scroll
+  m_Name: ScrollText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21346,12 +21346,12 @@ PrefabInstance:
     - target: {fileID: 6065175472498587081, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.6
+      value: -15.78
       objectReference: {fileID: 0}
     - target: {fileID: 6065175472498587081, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.3
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 6065175472498587081, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}

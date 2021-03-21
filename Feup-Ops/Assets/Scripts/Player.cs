@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
         if(health <= 0 ) {
             Die();
         }
@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
             space=true;
         }
         
-        if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown (KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
+        if(Input.GetButton ("Horizontal")){
             anim.SetBool("isWalkingRight", true);
         } else {
             anim.SetBool("isWalkingRight", false);
@@ -126,29 +126,34 @@ public class Player : MonoBehaviour
     }
 
    void OnCollisionEnter2D(Collision2D col)
-    {
-        if(col.gameObject.tag == "Book"){ 
-            collect(col);
-            score += 1;
-            bookBar.SetScore(score);
-        }
-        if(col.gameObject.tag == "Scroll"){ 
-            collect(col);
-            scroll += 1;
-            GameObject.Find("ImageScroll_Inactive").SetActive(false);
-        }
-        if(col.gameObject.tag == "Frozen"){
-            collect(col);
-            isFrozen = true;
-            GameObject c = GameObject.FindGameObjectWithTag("Clock");
-            if(c!=null){
-                c.GetComponent<Clock>().StartFreezeCount(5);
-            }
-        }
-        if(col.gameObject.tag == "Heart"){
-            collect(col);
-            health += 20;
-            healthBar.SetHealth(health);
+    {   
+        switch (col.gameObject.tag)
+        {   
+            case "Book":
+                collect(col);
+                score += 1;
+                bookBar.SetScore(score);
+            break;
+            case "Scroll":
+                collect(col);
+                scroll += 1;
+                GameObject.Find("ImageScroll_Inactive").SetActive(false);
+            break;
+            case "Frozen":
+                collect(col);
+                isFrozen = true;
+                GameObject c = GameObject.FindGameObjectWithTag("Clock");
+                if(c!=null){
+                    c.GetComponent<Clock>().StartFreezeCount(5);
+                }
+            break;
+            case "Heart":
+                collect(col);
+                health += 20;
+                healthBar.SetHealth(health);
+            break;
+            default:
+            break;
         }
     }
 
