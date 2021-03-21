@@ -50,12 +50,12 @@ public class Player : MonoBehaviour
             Die();
         }
 
-        if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKey ("w")) && touchGround()){            
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && touchGround()){            
             anim.SetTrigger("isJumping");
             space=true;
         }
         
-        if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey ("d") || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey ("a")) {
+        if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown (KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) {
             anim.SetBool("isWalkingRight", true);
         } else {
             anim.SetBool("isWalkingRight", false);
