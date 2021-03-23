@@ -21328,6 +21328,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1800749949}
+    - target: {fileID: 6065175472152922186, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 6065175472152922187, guid: 11867d1b67a2db240a7ed1af69e3b6a4,
         type: 3}
       propertyPath: m_Name
